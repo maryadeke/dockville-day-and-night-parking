@@ -1,11 +1,67 @@
+body{
+    background-image:url(/public/images/potential-image.jpg);
+    background-color: blueviolet;
+    background-blend-mode: screen;
+}
 .login-form{
 width: 400px ;
 margin: 200px auto;
-
+border: none;
+background-color:#FFFFFF ;
+background-image: -webkit-radial-gradient();
+ 
 }
+/* form{
+    position: relative;
+    width: 50% auto;
+    height: auto;
+    background-image:url(/public/images/potential-image.jpg);
+   background-color: blueviolet;
+   background-blend-mode: screen;
+} */
 .registration-form{
     margin: 200px auto;
     width: 400px;
-    background-color: ;
+    
+
+}
+
+.login-form {
+    
+
+    font-family:'poppins' , sans serif;
+}
+.submit{
+    border: none;
+    border-radius: 30px;
+    font-size: 15px ;
+    height:45px;
+    outline: none;
+    width: 100%;
+    background:rgba(255, 255, 255, 0.1); 
+    cursor: pointer;
+    transition: .3s;
+}
+
+
+
+
+body{
+    
+     margin: 200px auto;
+    width: 400px;
+    position: relative;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    opacity:1; 
+    object-fit: cover;
+    
+
 
 }
