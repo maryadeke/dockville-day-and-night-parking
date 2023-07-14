@@ -6,22 +6,24 @@
     <link rel="stylesheet" href="./public/css/bootstrap.css">
     <link rel="stylesheet" href="./public/css/style.css">
     <link rel="stylesheet" href="/public/css/test.css">
-    <link rel="stylesheet" href="./public/images/potential-image.jpg">
+    <link rel="stylesheet" href="./public/images/potential-image.jpg"/>
     <!-- <img src="./public/images/potential-image.jpg" alt="image here" > -->
     <title>registration form</title>
 </head>
 <body>
   
     <div class="registration-form">
-        <form action="">
+        <form id="formId" name="register"   action="#" onsubmit="return Validate()" method = "POST">
            <header>PERSONAL DETAIL REGISTRATION</header><br>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">First Name</label><br>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your first Name">
+                <input type="text" class="form-control" id="firstName"  name = "firstname" placeholder="Enter your first Name">
+                <span id="firstName-error"></span>
               </div>
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Last Name</label><br>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your last Name">
+                <input type="text" class="form-control" id="lastName" name="lastname" placeholder="Enter your last Name">
+                <span id ="lastName-error"></span>
               </div>
               <div class="mb-3">
                 
@@ -38,28 +40,39 @@
               </div>
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Number plate</label><br>
-                <input type="number plate" class="form-control" id="exampleFormControlInput1" placeholder="Enter your number plate">
+                <input type="number plate" class="form-control" name=" numberplate"  id="numberPlate" placeholder="Enter your number plate">
+                <span id="numberPlate-error"></span>
               </div>
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label"> vehicle model</label><br>
-                <input type="model" class="form-control" id="exampleFormControlInput1" placeholder="Enter vehicle model">
+                <input type="model" class="form-control" name="vehiclemodel" id="vehicleModel" placeholder="Enter vehicle model">
+                <span id="vehicleModel-error"></span>
               </div>
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">vehicle color</label><br>
-                <input type="color" class="form-control" id="exampleFormControlInput1" placeholder="Enter vehicle color">
+                <input type="color" class="form-control" name="vehiclecolor" id="vehicleColor" placeholder="Enter vehicle color">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email</label><br>
+                <input type="text" class="form-control" name="Email"  id="Email" placeholder="Enter your email here">
+                <span id="Email-error"></span>
               </div>
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Phone number</label><br>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your phone number">
+                <input type="number" class="form-control" name="phonenumber"  id="phoneNumber" placeholder="Enter your phone number">
+                <span id="phone-error"></span>
               </div>
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">NIN number</label><br>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your NIN number">
-
+                <input type="text" class="form-control" name="ninnumber" id="ninNumber" placeholder="Enter your NIN number">
+                 <span id="ninNumberError"></span>
               </div>
-              <br><br><input class="btn btn-primary" type="submit" value="Submit">
+              <button type="submit" class="btn btn-primary btn-lg"> Submit</button> 
         </form>
         
     </div>
+    <script src="./public/js/bootstrap.js"></script>
+    <script src="./public/js/script.js"></script>
+    <script src="./public/js/registration-script.js"></script>
 </body>
 </html>
