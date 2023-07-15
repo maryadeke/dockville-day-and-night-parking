@@ -13,7 +13,7 @@
 <body>
   
     <div class="registration-form">
-        <form id="formId" name="register"   action="#" onsubmit="return Validate()" method = "POST">
+        <form id="formId" name="register" onsubmit="Validate()"  >  
            <header>PERSONAL DETAIL REGISTRATION</header><br>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">First Name</label><br>
@@ -67,12 +67,13 @@
                 <input type="text" class="form-control" name="ninnumber" id="ninNumber" placeholder="Enter your NIN number">
                  <span id="ninNumberError"></span>
               </div>
-              <button type="submit" class="btn btn-primary btn-lg"> Submit</button> 
+              <button type="submit" class="btn btn-primary btn-lg" onclick="Validate()"> Submit</button> 
         </form>
         
     </div>
+    <script src="./public/js/registrationScript.js"></script>
     <script src="./public/js/bootstrap.js"></script>
-    <script src="./public/js/script.js"></script>
-    <script src="./public/js/registration-script.js"></script>
+    <!-- <script src="./public/js/script.js"></script> -->
+    
 </body>
 </html>
