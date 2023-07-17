@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+    background: rgb(207, 130, 81);
+}
+#cards .tyre,.parking,.battery{
+    background: #fff;
+    box-shadow: 0 0 12px rgba(0, 0, 0,0.5);
+    text-align: center;
+    align-items: center;
+    padding: 8px;
+    width: 25%;
+    color: black;
+    height: 250px;
+    border-radius: 8px;
+}
+#cards .tyre h3{
+    text-transform: uppercase;
+    color:rgb(235, 54, 9);
+}
+#cards .parking h3{
+    text-transform: uppercase;
+    color:rgb(235, 54, 9);
+}
+#cards .battery h3{
+    text-transform: uppercase;
+    color:rgb(235, 54, 9);
+}
+
+#cards{
+    position: relative;
+    display: flex;
+justify-content: space-around;
+font-size: 8px;
+align-items: center;
+    width:100%;
+    height: 50vh;
+    
+    /* background: red; */
+}
+header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+    height: 50vh;
+    background: url(./public/images/carparking.jpg);
+    background-size: cover;
+    /* background-repeat: repeat-x; */
+    /* background: black;
+    background-blend-mode: multiply; */
+    /* margin-bottom: 40px; */
+}
+.overlay{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-family: sans-serif;
+    color: beige;
+    font-size:2.5vw;
+}
+
+.overlay h1::before{
+    position:absolute;
+    content: "'here are some of the services we offer...'";
+    font-size:1.6vw;
+    text-transform: capitalize;
+    bottom: 42%;
+    left: 22em;
+
+}
+@media screen and (min-width:760px){
+    .overlay h1::before{
+        position:absolute;
+        content: "'here are some of the services we offer...'";
+        font-size:1.6vw;
+        text-transform: capitalize;
+        bottom: 35%;
+        left: 22em;
+    
+    }
+}
+button{
+    padding-top: 50px;
+    padding-left: 85px;
+    position: relative;
+    color:white;
+    background-color: green;
+    font-size:15px ;
+}
+    
+    
+
+
+

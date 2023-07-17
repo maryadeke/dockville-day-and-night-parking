@@ -1,0 +1,36 @@
+#cards .truck,.personal-car,.taxi,.coaster,.bodaboda{
+    background: #fff;
+    box-shadow: 0 0 12px rgba(0, 0, 0,0.5);
+    text-align: center;
+    align-items: center;
+    padding: 8px;
+    width: 25%;
+    color: black;
+    height: 250px;
+    border-radius: 8px;
+}
+body{
+    font-family: sans-serif;
+    background: rgb(207, 130, 81);
+}
+/* #cards{
+    position: relative;
+    display: flex;
+justify-content: space-around;
+font-size: 8px;
+align-items: center;
+    width:;
+    height: 50vh;
+}
+.overlay{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-family: sans-serif;
+    color: beige;
+    font-size:2.5vw;
+} */

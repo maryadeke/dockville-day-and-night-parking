@@ -15,7 +15,7 @@ function Validate ()  {
 // validating full name
 // validating for emptiness
 if (firstName.value == ""){
-    firstName.style.border = "1px solid red";
+    // firstName.style.border = "5px solid red";
     firstNameError.innerHTML = "First Name is required";
     firstNameError.style ="color:red;font-size:11pxfont family: helvetica,Arial,sans-serif"
     // lastName.focus();
