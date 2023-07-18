@@ -1,0 +1,126 @@
+#cards .truck,.personal-car,.taxi,.coaster,.bodaboda{
+    background: #fff;
+    box-shadow: 0 0 12px rgba(0, 0, 0,0.5);
+    text-align: center;
+    align-items: center;
+    padding: 8px;
+    width: 25%;
+    color: black;
+    height: 250px;
+    border-radius: 8px;
+}
+body{
+    font-family: sans-serif;
+    background: rgb(207, 130, 81);
+}
+
+.image-container{
+    border-radius:100px ;
+}
+#adding-cards{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+
+}
+#adding-cards #cards{
+    position: relative;
+    text-align: center;
+    width: 25%;
+    border-radius: 10px;
+    background: rgba(255, 255, 255,0.8);
+height: 310px;
+
+}
+.image-card {
+    width: 100%;
+    height: 18vh;
+    /* background: url(./images/pexels-pixabay-164634.jpg); */
+    background-color: black;
+    background-blend-mode: screen;
+    background-size: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-position: center;
+}
+.image-card1{
+    width: 100%;
+    height:18vh;
+    background:url(/public/images/truck.webp) ;
+    background-blend-mode: screen;
+    background-size: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-position: center;
+}
+.image-card2{
+    width: 100%;
+    height:18vh;
+    background:url(/public/images/perso-car.jpg) ;
+    background-blend-mode: screen;
+    background-size: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-position: center;
+}
+.image-card3{
+    width: 100%;
+    height:18vh;
+    background:url(/public/images/taxi.jpeg) ;
+    background-blend-mode: screen;
+    background-size: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-position: center;
+}
+.image-card4{
+    width: 100%;
+    height:18vh;
+    background:url(/public/images/coaster1.jpeg) ;
+    background-blend-mode: screen;
+    background-size: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-position: center;
+}
+
+.image-card5{
+    width: 100%;
+    height:18vh;
+    background:url(/public/images/bodaboda.jpg) ;
+    background-blend-mode: screen;
+    background-size: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-position: center;
+}
+
+
+
+}
+#adding-cards #cards h4{
+    padding: 15px;
+    color: rgb(15, 227, 15);
+}
+.selections{
+    padding: 8px;
+}
+#adding-cards button{
+    width: 130px;
+    height: 35px;
+    border:none;
+    outline: none;
+    background: rgb(82, 218, 19);
+    border-radius: 50px;
+}
+#adding-cards button a{
+    color:#fff;
+}
+.selections{
+    text-align: justify;
+}
+.overlay{
+    color: beige;
+}
