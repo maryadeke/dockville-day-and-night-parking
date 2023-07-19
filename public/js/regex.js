@@ -1,4 +1,4 @@
-function Validate ()  {
+function Validate (event)  {
     // picking input fields with their names or IDs
     let firstName =  document.registration.firstName;
     let lastName = document.registration.lastName
