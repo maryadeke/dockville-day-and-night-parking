@@ -74,18 +74,36 @@ select{
     box-shadow:  0 0 5px black;
     height: auto;
     border-radius: 8px;
+    background-color:antiquewhite;
+    transition: 0.1s ease;
+}
+.card-a:hover{
+padding: 8px;
+
+
+
 }
 .card-a td{
     padding: 5px;
 }
 .card-a button{
     border: none;
-    background: blueviolet;
-    color: #fff;
+    background: black;
+    color:aquamarine;
     padding: 0 25px;
     height: 35px;
     border-radius: 50px;
     font-weight: bold;
+    transition: 0.1s ease-in;
+}
+.card-a button:hover{
+    padding:10px 10px 10px;
+background-color:orangered;
+    cursor: pointer;
+    outline: none;
+    color:white;  
+    
+
 }
 legend{
     font-family: 'Times New Roman', Times, serif;
@@ -154,4 +172,30 @@ header{
     position: relative;
     width: 100%;
     height: 45vh;
+}
+legend{
+    font-family: 'Times New Roman', Times, serif;
+    color:green;
+    transition: 0.1s ease-in;
+}
+legend:hover{
+    padding:10px 10px 10px;
+    /* width:70px; */
+    color:black;
+    border:none ;
+    border-bottom: 4px solid orangered ;
+}
+fieldset{
+    background: rgb(207, 130, 81);
+    
+}
+select{
+    color:blue;
+    font-weight: 10px;
+}
+section{
+    color:black;
+}
+td{
+    color:green;
 }
