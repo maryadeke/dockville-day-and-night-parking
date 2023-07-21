@@ -4,46 +4,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./public/css/bootstrap.css" />
-  <link rel="stylesheet" href="./public/css/style.css" />
-  <link rel="stylesheet" href="/public/css/test.css" />
-  <link rel="stylesheet" href="./public/images/potential-image.jpg" />
+  <!-- <link rel="stylesheet" href="/public/css/bootstrap.css"> -->
+  <!-- <link rel="stylesheet" href="./public/css/style.css"> -->
+  <!-- <link rel="stylesheet" href="/public/css/test.css"> -->
+  <!-- <link rel="stylesheet" href="./public/images/potential-image.jpg"/> -->
+  <!-- <img src="./public/images/potential-image.jpg" alt="image here" > -->
   <link rel="stylesheet" href="/public/css/registration.css" />
   <title>registration form</title>
 </head>
 
 <body>
   <div class="registration-form">
-    <form id="formId" name="register">
+    <form id="formId" onsubmit="return Validate()" name="register">
       <header>PERSONAL DETAIL REGISTRATION</header>
       <br />
-      <div class="cols">
+      <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">First Name</label><br />
         <input type="text" class="form-control" id="firstName" name="firstname" placeholder="Enter your first Name" />
         <span id="firstName-error"></span>
       </div>
-      <div class="cols">
+      <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Last Name</label><br />
         <input type="text" class="form-control" id="lastName" name="lastname" placeholder="Enter your last Name" />
         <span id="lastName-error"></span>
       </div>
-      <div class="cols">
+      <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Email</label><br />
-        <input type="text" class="form-control" name="email" id="email" placeholder="Enter your email here" />
+        <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email here" />
         <span id="email-error"></span>
       </div>
-      <div class="cols">
+      <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Phone number</label><br />
-        <input type="number" class="form-control" name="phonenumber" id="phoneNumber"
+        <input type="tel" class="form-control" name="phonenumber" id="phoneNumber"
           placeholder="Enter your phone number" />
         <span id="phoneNumber-error"></span>
       </div>
-      <div class="cols">
+      <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">NIN number</label><br />
         <input type="text" class="form-control" name="ninnumber" id="ninNumber" placeholder="Enter your NIN number" />
         <span id="ninNumber-error"></span>
       </div>
-      <div class="rows">
+      <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Gender</label><br />
 
         <div class="form-check form-check-inline">
@@ -55,30 +56,28 @@
           <label class="form-check-label" for="inlineRadio2">Female</label>
         </div>
       </div>
-      <div class="cols">
+      <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Number plate</label><br />
         <input type="number plate" class="form-control" name=" numberplate" id="numberPlate"
           placeholder="Enter your number plate" />
         <span id="numberPlate-error"></span>
       </div>
-      
-        <div class="cols">
-          <label for="exampleFormControlInput1" class="form-label">Unique number</label><br />
-          <input type="uniqueNumber" class="form-control" name=" uniquenumber" id="uniqueNumber"
-            placeholder="Unique number" />
-          <span id="uniqueNumber-error"></span>
-        </div>
-        <div class="cols">
-          <label for="exampleFormControlInput1" class="form-label">Vehicle model</label><br />
-          <input type="vehicleModel" class="form-control" name=" vehiclemodel" id="vehicleModel"
-            placeholder="Vehicle Model" />
-          <span id="vehicleModel"></span>
-        </div>
-      
-      
-      <div class="cols">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Unique number</label><br />
+        <input type="uniqueNumber" class="form-control" name=" uniquenumber" id="uniqueNumber"
+          placeholder="Unique number" />
+        <span id="uniqueNumber-error"></span>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Vehicle model</label><br />
+        <input type="vehicleModel" class="form-control" name=" vehiclemodel" id="vehicleModel"
+          placeholder="Vehicle Model" />
+        <span id="vehicleModel-error"></span>
+      </div>
+
+      <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Car type</label><br />
-        <select class="form-select" type="car-type" id="car-type" name="car-type" aria-label="Default select example">
+        <select class="form-select" id="car-type" name="car-type" aria-label="Default select example">
           <option value="" disabled selected>select car type</option>
           <option value="1">Truck</option>
           <option value="2">Taxi</option>
@@ -88,23 +87,335 @@
         </select>
         <span id="carType-error"></span>
       </div>
-      
-      <div class="cols">
+      <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">vehicle color</label><br />
         <input type="color" class="form-control" name="vehiclecolor" id="vehicleColor"
           placeholder="Enter vehicle color" />
+        <span id="vehicleColor-error"></span>
       </div>
       <label for="">Date of Registration</label>
       <div class="cols">
-        <input type="time" name="time" />
-        <input type="date" name="date" />
+        <input type="time" name="time" id="registrationTime" />
+        <input type="date" name="date " id="registrationDate" />
+        <span id="dateTime-error"></span>
       </div>
 
-      <button type="submit" class="button">Submit</button>
+      <button type="submit" class="btn btn-primary btn-lg">Submit</button>
     </form>
   </div>
-  <script src="./public/js/bootstrap.js"></script>
-  <script src="/public/js/registration-script.js"></script>
+  <!-- <script src="./public/js/registrationScript.js"></script> -->
+  <!-- <script src="./public/js/bootstrap.js"></script> -->
 </body>
+<script>
+  const btn = document.querySelector(".btn");
+  btn.addEventListener("click", validate);
+  function validate(e) {
+    e.preventDefault();
+    // picking input fields with their names or IDs
+    let firstName = document.getElementById("firstName");
+    let lastName = document.getElementById("lastName");
+    let phoneNumber = document.getElementById("phoneNumber");
+    let numberPlate = document.getElementById("numberPlate");
+    let email = document.getElementById("email");
+    let ninNumber = document.getElementById("ninNumber");
+    let uniqueNumber = document.getElementById("uniqueNumber");
+    let carType = document.getElementById("car-type");
+    let vehicleModel = document.getElementById("vehicleModel");
+    let vehicleColor = document.getElementById("vehicleColor");
+    let registrationTime = document.getElementById("registrationTime");
+    let registrationDate = document.getElementById("registrationDate");
+
+    // picking error fields
+    let firstNameError = document.getElementById("firstName-error");
+    let lastNameError = document.getElementById("lastName-error");
+    let phoneNumberError = document.getElementById("phoneNumber-error");
+    let emailError = document.getElementById("email-error");
+    let numberPlateError = document.getElementById("numberPlate-error");
+    let ninNumberError = document.getElementById("ninNumber-error");
+    let uniqueNumberError = document.getElementById("uniqueNumber-error");
+    let carTypeError = document.getElementById("carType-error");
+    let vehicleModelError = document.getElementById("vehicleModel-error");
+    let vehicleColorError = document.getElementById("vehicleColor-error");
+    let dateTimeError = document.getElementById("dateTime-error");
+
+    // validating first name
+    if (firstName.value == "") {
+      firstName.style.border = "2px solid red";
+      firstNameError.innerHTML = "First Name is required";
+      firstNameError.style =
+        "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
+      firstName.focus();
+      return false;
+    } else if (firstName.value.length < 2) {
+      firstName.style.border = "2px solid red";
+      firstNameError.innerHTML = "First Name must be at least 2 characters";
+      firstNameError.style =
+        "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
+      firstName.focus();
+      return false;
+    } else if (firstName.value.length > 20) {
+      firstName.style.border = "2px solid red";
+      firstNameError.innerHTML =
+        "First Name cannot be more than 20 characters";
+      firstNameError.style =
+        "color: red; font-size:11px;  font-family: helvetica,Arial,sans-serif";
+      firstName.focus();
+      return false;
+    } else {
+      firstName.style.border = "2px solid green";
+      firstNameError.innerHTML = "";
+      lastName.focus();
+    }
+
+    // validating last name
+    if (lastName.value == "") {
+      lastName.style.border = "2px solid red";
+      lastNameError.innerHTML = "Last Name is required";
+      lastNameError.style =
+        "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
+      lastName.focus();
+      return false;
+    } else if (lastName.value.length < 2) {
+      lastName.style.border = "2px solid red";
+      lastNameError.innerHTML = "Last Name must be at least 2 characters";
+      lastNameError.style =
+        "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
+      lastName.focus();
+      return false;
+    } else if (lastName.value.length > 20) {
+      lastName.style.border = "2px solid red";
+      lastNameError.innerHTML = "Last Name cannot be more than 20 characters";
+      lastNameError.style =
+        "color: red; font-size:11px;  font-family: helvetica,Arial,sans-serif";
+      lastName.focus();
+      return false;
+    } else {
+      lastName.style.border = "2px solid green";
+      lastNameError.innerHTML = "";
+      email.focus();
+    }
+
+    //    validating email
+    if (email.value == "") {
+      email.style.border = "2px solid red";
+      emailError.textContent = "Email is required";
+      emailError.style =
+        "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
+      email.focus();
+      return false;
+    }
+    let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    if (!email.value.match(emailRegex)) {
+      email.style.border = "1px solid red";
+      emailError.textContent = "The email address is not valid.";
+      emailError.style =
+        "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
+      email.focus();
+      return false;
+    } else {
+      email.style.border = "2px solid green";
+      emailError.textContent = "";
+      phoneNumber.focus();
+    }
+
+    // validating for NIN
+    if (ninNumber.value == "") {
+      ninNumber.style.border = "2px solid red";
+      ninNumberError.innerHTML = "NIN Number is required";
+      ninNumberError.style =
+        "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
+      ninNumber.focus();
+      return false;
+    }
+    const ninNumberRegex = /^CF([a-zA-Z0-9]{12})+$/;
+    const ninNumberRegex2 = /^CF([a-zA-Z0-9]{12})+$/;
+
+    if (
+      !(
+        ninNumberRegex.test(ninNumber.value) ||
+        ninNumberRegex2.test(ninNumber.value)
+      )
+    ) {
+      ninNumber.style.border = "2px solid red";
+      ninNumberError.innerHTML =
+        " NIN number should look like CFxxxx or CMxxxx";
+      ninNumberError.style =
+        "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
+      ninNumber.focus();
+      return false;
+    } else {
+      ninNumber.style.border = "2px solid green";
+      ninNumberError.innerHTML = "";
+    }
+
+    //  Validating phone number
+    if (phoneNumber.value == "") {
+      phoneNumber.style.border = "2px solid red";
+      phoneNumberError.innerHTML = "Phone Number is required";
+      phoneNumberError.style =
+        "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
+      phoneNumber.focus();
+      return false;
+    }
+    let phoneNumberRegex =
+      /^(\+256|0)(77[0-9]|72[0-9]|74[0-9]|78[0-9]|70[0-9]|71[0-9]|75[0-9]|76[0-9]|79[0-9])(\d{6})$/;
+
+    if (!phoneNumberRegex.test(phoneNumber.value)) {
+      phoneNumber.style.border = "2px solid red";
+      phoneNumberError.innerHTML = "Invalid phone number";
+      phoneNumberError.style =
+        "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
+      phoneNumber.focus();
+      return false;
+    } else {
+      phoneNumber.style.border = "2px solid green";
+      phoneNumberError.innerHTML = "";
+      uniqueNumber.focus();
+    }
+
+    //  generating unique id numbers
+    const bodaRegex = /^BB-([0-9]{3})+$/;
+    const pcarRegex = /^PC-([0-9]{3})+$/;
+    const taxiRegex = /^TX-([0-9]{3})+$/;
+    const truckRegex = /^TK-([0-9]{3})+$/;
+    const coasterRegex = /^CC-([0-9]{3})+$/;
+    // eg BB-001, BB-002, BB-003
+
+    if (
+      !(
+        bodaRegex.test(uniqueNumber.value) ||
+        pcarRegex.test(uniqueNumber.value) ||
+        taxiRegex.test(uniqueNumber.value) ||
+        truckRegex.test(uniqueNumber.value) ||
+        coasterRegex.test(uniqueNumber.value)
+      )
+    ) {
+      uniqueNumber.style.border = "2px solid red";
+      uniqueNumberError.textContent = "Enter a valid unique number";
+      uniqueNumber.focus();
+      return false;
+    } else {
+      uniqueNumber.style.border = "2px solid green";
+      uniqueNumberError.textContent = "";
+      carType.focus();
+    }
+
+    // validating car type
+    if (carType.value == "") {
+      carType.style.border = "2px solid red";
+      carTypeError.textContent = "Car Type is required";
+      carTypeError.style =
+        "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
+      carType.focus();
+      return false;
+    } else {
+      carType.style.border = "2px solid green";
+      carTypeError.textContent = "";
+      numberPlate.focus();
+    }
+
+    //validating number plate
+    if (numberPlate.value == "") {
+      numberPlate.style.border = "1px solid red";
+      numberPlateError.innerHTML = "Number Plate is required";
+      numberPlateError.style =
+        "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
+      return false;
+    }
+
+    var numberPlateRegex = /^[U][A-Z0-9]{6}$/;
+    if (!numberPlate.value.match(numberPlateRegex)) {
+      alert(
+        "Number plate must start with a capital 'U' followed by 6 alphanumeric characters."
+      );
+      return false;
+    } else {
+      numberPlate.style.border = "2px solid green";
+      numberPlateError.innerHTML = "";
+      vehicleModel.focus();
+    }
+    // validating vehicle model
+    if (vehicleModel.value == "") {
+      vehicleModel.style.border = "2px solid red";
+      vehicleModelError.innerHTML = "vehicle model is required";
+      vehicleModelError.style =
+        "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
+      vehicleModel.focus();
+      return false;
+    } else {
+      vehicleModel.style.border = "2px solid green";
+      vehicleModelError.innerHTML = "";
+      vehicleColor.focus();
+    }
+
+    //  validating vehicle color
+    if (vehicleColor.value === '') {
+  vehicleColor.style.border = "2px solid red";
+  vehicleColorError.innerHTML = "Vehicle color is required";
+  vehicleColorError.style.color = "red";
+  vehicleColorError.style.fontSize = "11px";
+  vehicleColorError.style.fontFamily = "helvetica, Arial, sans-serif";
+  vehicleColor.focus();
+  return false;
+} else {
+  vehicleColor.style.border = "2px solid green";
+  vehicleColorError.innerHTML = "";
+}
+
+    
+    
+    }
+    // validating date and time
+    function validateDateTime() {
+      const time = registrationTime.value;
+      const date = registrationDate.value;
+
+      // Check if both time and date fields are filled
+      if (time === "" || date === "") {
+        dateTimeError.innerHTML = "Date and time are required";
+        dateTimeError.style.color = "red";
+        dateTimeError.style.fontSize = "11px";
+        dateTimeError.style.fontFamily = "helvetica, Arial, sans-serif";
+        return false;
+      }
+      function validateDateTime() {
+  const time = registrationTime.value;
+  const date = registrationDate.value;
+
+  // Check if both time and date fields are filled
+  if (time === '' || date === '') {
+    dateTimeError.innerHTML = "Date and time are required";
+    dateTimeError.style.color = "red";
+    dateTimeError.style.fontSize = "11px";
+    dateTimeError.style.fontFamily = "helvetica, Arial, sans-serif";
+    return false;
+  } else {
+    // Valid date and time, clear the error message if any
+    dateTimeError.innerHTML = "";
+    return true;
+  }
+}
+
+// Call the validateDateTime function when the form is submitted
+function Validate() {
+  // ... Other validation code ...
+
+  // Validate date and time
+  const isDateTimeValid = validateDateTime();
+
+  // Return false if any validation failed
+  if (!isDateTimeValid) {
+    return false;
+  }
+
+  // ... Other validation code ...
+
+  // Return true if all validations passed
+  return true;
+}
+
+  }
+</script>
 
 </html>

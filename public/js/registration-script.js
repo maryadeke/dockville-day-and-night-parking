@@ -27,136 +27,136 @@ function validate(e){
     
     
     // validating first name
-// 	if (firstName.value == ""){
-//     firstName.style.border = "2px solid red";
-//     firstNameError.innerHTML = "First Name is required";
-//     firstNameError.style ="color:red; font-size:11px; font-family: helvetica,Arial,sans-serif"
-//     firstName.focus();
-//      return false;
-//     }
-//          else if(firstName.value.length<2){
-//         firstName.style.border = "2px solid red";
-//         firstNameError.innerHTML = "First Name must be at least 2 characters";
-//         firstNameError.style ="color:red; font-size:11px; font-family: helvetica,Arial,sans-serif"
-//         firstName.focus();
-//         return false;
-//     }
-//           else if(firstName.value.length>20){
-//           firstName.style.border = "2px solid red";
-//           firstNameError.innerHTML = "First Name cannot be more than 20 characters";
-//           firstNameError.style = "color: red; font-size:11px;  font-family: helvetica,Arial,sans-serif"
-//           firstName.focus();
-//           return false;
-//     }
+	if (firstName.value == ""){
+    firstName.style.border = "2px solid red";
+    firstNameError.innerHTML = "First Name is required";
+    firstNameError.style ="color:red; font-size:11px; font-family: helvetica,Arial,sans-serif"
+    firstName.focus();
+     return false;
+    }
+         else if(firstName.value.length<2){
+        firstName.style.border = "2px solid red";
+        firstNameError.innerHTML = "First Name must be at least 2 characters";
+        firstNameError.style ="color:red; font-size:11px; font-family: helvetica,Arial,sans-serif"
+        firstName.focus();
+        return false;
+    }
+          else if(firstName.value.length>20){
+          firstName.style.border = "2px solid red";
+          firstNameError.innerHTML = "First Name cannot be more than 20 characters";
+          firstNameError.style = "color: red; font-size:11px;  font-family: helvetica,Arial,sans-serif"
+          firstName.focus();
+          return false;
+    }
 
-//   else{
-//       firstName.style.border = "2px solid green";
-//       firstNameError.innerHTML = "";
-//       lastName.focus();
-//     }
-
-
+  else{
+      firstName.style.border = "2px solid green";
+      firstNameError.innerHTML = "";
+      lastName.focus();
+    }
 
 
 
-//     // validating last name
-//  if (lastName.value == ""){
-//       lastName.style.border = "2px solid red";
-//       lastNameError.innerHTML = "Last Name is required";
-//       lastNameError.style ="color:red; font-size:11px; font-family: helvetica,Arial,sans-serif"
-//       lastName.focus();
-//       return false;
-//     }
-//             else if (lastName < 2){
-//             lastName.style.border = "2px solid red";
-//             lastNameError.innerHTML = "Last Name must be at least 2 characters";
-//             lastNameError.style ="color:red; font-size:11px; font-family: helvetica,Arial,sans-serif"
-//             lastName.focus();
-//             return false;
-//       }
-//             else if(lastName.value.length>20){
-//             lastName.style.border = "2px solid red";
-//             lastNameError.innerHTML = "Last Name cannot be more than 20 characters";
-//             lastNameError.style = "color: red; font-size:11px;  font-family: helvetica,Arial,sans-serif"
-//             lastName.focus();
-//             return false;
-//       }
-//    else{
-//       lastName.style.border = "2px solid green";
-//       lastNameError.innerHTML = "";
-//       ninNumber.focus();
-//        }
+
+
+    // validating last name
+ if (lastName.value == ""){
+      lastName.style.border = "2px solid red";
+      lastNameError.innerHTML = "Last Name is required";
+      lastNameError.style ="color:red; font-size:11px; font-family: helvetica,Arial,sans-serif"
+      lastName.focus();
+      return false;
+    }
+            else if (lastName < 2){
+            lastName.style.border = "2px solid red";
+            lastNameError.innerHTML = "Last Name must be at least 2 characters";
+            lastNameError.style ="color:red; font-size:11px; font-family: helvetica,Arial,sans-serif"
+            lastName.focus();
+            return false;
+      }
+            else if(lastName.value.length>20){
+            lastName.style.border = "2px solid red";
+            lastNameError.innerHTML = "Last Name cannot be more than 20 characters";
+            lastNameError.style = "color: red; font-size:11px;  font-family: helvetica,Arial,sans-serif"
+            lastName.focus();
+            return false;
+      }
+   else{
+      lastName.style.border = "2px solid green";
+      lastNameError.innerHTML = "";
+      ninNumber.focus();
+       }
 
             
        
        
        
-       //  validating for NIN
-// if (ninNumber.value == ""){
-//   ninNumber.style.border = "2px solid red";
-//   ninNumberError.innerHTML = "NIN Number is required";
-//   ninNumberError.style ="color:red; font-size:11px; font-family: helvetica,Arial,sans-serif"
-//   ninNumber.focus();
-//   return false;
-// }
-//  const ninNumberRegex  = /^CF([a-zA-Z0-9]{12})+$/;
-//  const ninNumberRegex2 = /^CF([a-zA-Z0-9]{12})+$/;
+        // validating for NIN
+if (ninNumber.value == ""){
+  ninNumber.style.border = "2px solid red";
+  ninNumberError.innerHTML = "NIN Number is required";
+  ninNumberError.style ="color:red; font-size:11px; font-family: helvetica,Arial,sans-serif"
+  ninNumber.focus();
+  return false;
+}
+ const ninNumberRegex  = /^CF([a-zA-Z0-9]{12})+$/;
+ const ninNumberRegex2 = /^CF([a-zA-Z0-9]{12})+$/;
 
-//  if(!(ninNumberRegex.test(ninNumber.value)||ninNumberRegex2.test(ninNumber.value))){
-//   ninNumber.style.border = "2px solid red";
-//   ninNumberError.innerHTML = " NIN number should look like CFxxxx or CMxxxx";
-//   ninNumberError.style ="color:red; font-size:11px; font-family: helvetica,Arial,sans-serif"
-//   ninNumber.focus();
-//   return false;
-//  }
-//  else{
-//   ninNumber.style.border = "2px solid green";
-//   ninNumberError.innerHTML = "";
-//  }
+ if(!(ninNumberRegex.test(ninNumber.value)||ninNumberRegex2.test(ninNumber.value))){
+  ninNumber.style.border = "2px solid red";
+  ninNumberError.innerHTML = " NIN number should look like CFxxxx or CMxxxx";
+  ninNumberError.style ="color:red; font-size:11px; font-family: helvetica,Arial,sans-serif"
+  ninNumber.focus();
+  return false;
+ }
+ else{
+  ninNumber.style.border = "2px solid green";
+  ninNumberError.innerHTML = "";
+ }
 
-// //  generating unique id numbers
-// const bodaRegex = /^BB-([0-9]{3})+$/;
-// const pcarRegex = /^PC-([0-9]{3})+$/;
-// const taxiRegex = /^TX-([0-9]{3})+$/;
-// const truckRegex = /^TK-([0-9]{3})+$/;
-// const coasterRegex = /^CC-([0-9]{3})+$/;
-// // eg BB-001, BB-002, BB-003
+//  generating unique id numbers
+const bodaRegex = /^BB-([0-9]{3})+$/;
+const pcarRegex = /^PC-([0-9]{3})+$/;
+const taxiRegex = /^TX-([0-9]{3})+$/;
+const truckRegex = /^TK-([0-9]{3})+$/;
+const coasterRegex = /^CC-([0-9]{3})+$/;
+// eg BB-001, BB-002, BB-003
 
-// if(!(vehicleModel.value.test(bodaRegex) || vehicleModel.value.match(pcarRegex) || vehicleModel.value.match(taxiRegex) || vehicleModel.value.match(truckRegex) || vehicleModel.value.match(coasterRegex))) { 
-// vehicleModel.style.border = "2px solid red";
-// vehicleModelError.textContent = "Enter a valid vehicle model";
-// vehicleModelError.focus();
-// return false;
+if(!(vehicleModel.value.test(bodaRegex) || vehicleModel.value.match(pcarRegex) || vehicleModel.value.match(taxiRegex) || vehicleModel.value.match(truckRegex) || vehicleModel.value.match(coasterRegex))) { 
+vehicleModel.style.border = "2px solid red";
+vehicleModelError.textContent = "Enter a valid vehicle model";
+vehicleModelError.focus();
+return false;
 
-// }
-
-
+}
 
 
 
 
- // Validating phone number
-// if(phoneNumber.value == ""){
-//   phoneNumber.style.border = "2px solid red";
-//   phoneNumberError.innerHTML = "Phone Number is required";
-//   phoneNumberError.style ="color:red; font-size:11px; font-family: helvetica,Arial,sans-serif"
-//   phoneNumber.focus();
-//   return false;
-// }
-//  let phoneNumberRegex  = /^(\+256|0)(77[0-9]|72[0-9]|74[0-9]|78[0-9]|70[0-9]|71[0-9]|75[0-9]|76[0-9]|79[0-9])(\d{6})$/;
 
-//  if (!phoneNumberRegex.test(phoneNumber.value)) {
-//   phoneNumber.style.border = "2px solid red";
-//   phoneNumberError.innerHTML = "Invalid phone number";
-//   phoneNumberError.style ="color:red; font-size:11px; font-family: helvetica,Arial,sans-serif"
-//   phoneNumber.focus();
-//   return false;
-//  }
-//  else{
-//   phoneNumber.style.border = "2px solid green";
-//   phoneNumberError.innerHTML = "";
 
-//  }
+//  Validating phone number
+if(phoneNumber.value == ""){
+  phoneNumber.style.border = "2px solid red";
+  phoneNumberError.innerHTML = "Phone Number is required";
+  phoneNumberError.style ="color:red; font-size:11px; font-family: helvetica,Arial,sans-serif"
+  phoneNumber.focus();
+  return false;
+}
+ let phoneNumberRegex  = /^(\+256|0)(77[0-9]|72[0-9]|74[0-9]|78[0-9]|70[0-9]|71[0-9]|75[0-9]|76[0-9]|79[0-9])(\d{6})$/;
+
+ if (!phoneNumberRegex.test(phoneNumber.value)) {
+  phoneNumber.style.border = "2px solid red";
+  phoneNumberError.innerHTML = "Invalid phone number";
+  phoneNumberError.style ="color:red; font-size:11px; font-family: helvetica,Arial,sans-serif"
+  phoneNumber.focus();
+  return false;
+ }
+ else{
+  phoneNumber.style.border = "2px solid green";
+  phoneNumberError.innerHTML = "";
+
+ }
 
 
 
@@ -168,26 +168,26 @@ function validate(e){
 
 
       // validating email
-      // if (email.value == ""){
-      //   email.style.border = "1px solid red";
-      //   emailError.textContent = "Email is required";
-      //   emailError.style ="color:red; font-size:11px; font-family: helvetica,Arial,sans-serif"
-      //   email.focus();
-      //    return false;
-      // }
-      //    let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (email.value == ""){
+        email.style.border = "1px solid red";
+        emailError.textContent = "Email is required";
+        emailError.style ="color:red; font-size:11px; font-family: helvetica,Arial,sans-serif"
+        email.focus();
+         return false;
+      }
+         let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-      //   if (!email.value.match(emailRegex)){
-      //     email.style.border = "1px solid red";
-      //     emailError.textContent = "The email adress is not valid.";
-      //     emailError.style = "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif"
-      //     email.focus();
-      //     return false;
-      //   }
-      //   else{
-      //             email.style.border = "1px solid green";
-      //             emailError.textContent = "";
-      //           }
+        if (!email.value.match(emailRegex)){
+          email.style.border = "1px solid red";
+          emailError.textContent = "The email adress is not valid.";
+          emailError.style = "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif"
+          email.focus();
+          return false;
+        }
+        else{
+                  email.style.border = "1px solid green";
+                  emailError.textContent = "";
+                }
 
                 
 
