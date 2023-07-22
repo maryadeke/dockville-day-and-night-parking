@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- <link href="css/style.css" rel="stylesheet" type="text/css" media="all" /> -->
 <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
 <link rel="stylesheet" href="/public/css/signup.css">
 </head>
@@ -14,11 +14,15 @@
 		<h1>  SignUp Form</h1>
 		<div class="main-agileinfo">
 			<div class="agileits-top">
-				<form action="#" method="post">
-					<input class="text" type="text" name="Username" placeholder="Username">
-					<input class="text email" type="email" name="email" placeholder="Email" >
-					<input class="text" type="password" name="password" placeholder="Password" >
-					<input class="text w3lpass" type="password" name="password" placeholder="Confirm Password" >
+				<form onsubmit="return Validate()" action="" method="post" name="signup">
+					<input class="text" type="text" name="Username" id="userName" placeholder="Username">
+					<span id="userName-error"></span>
+					<input class="text email" type="email" name="email" id="email" placeholder="Email" >
+					<span id="email-error"></span>
+					<input class="text" type="password" name="password" id="password" placeholder="Password" >
+					<span id="password-error"></span>
+					<input class="text w3lpass" type="password" name="password" id="confirmPassword" placeholder="Confirm Password" >
+					<span id="confirmPassword-error"></span>
 					<div class="wthree-text">
 						<label class="anim">
 							<input type="checkbox" class="checkbox" >
@@ -26,9 +30,9 @@
 						</label>
 						<div class="clear"> </div>
 					</div>
-					<a href="./home.html">
+					<!-- <a href="./home.html"> -->
 						<input type="button" value="SIGNUP">
-					</a>
+					<!-- </a> -->
 					
 				</form>
 				<p> Already have an Account? <a href="./signIn.html"> SIGN IN NOW!</a></p>
@@ -54,4 +58,55 @@
 	</div>
 	<!-- //main -->
 </body>
+<script>
+	const btn = document.querySelector(".btn");
+    btn.addEventListener("click", validate);
+    function validate(e) {
+      e.preventDefault();
+
+	//   picking input fields with their IDs
+let userName = document.getElementById("userName");
+let email = document.getElementById("email");
+let password = document.getElementById("password");
+let confirmPassword = document.getElementById("confirmPassword");
+
+// picking error fields
+let userNameError = document.getElementById("userName-error");
+let emailError = document.getElementById("email-error");
+let passwordError = document.getElementById("password-error");
+let confirmPasswordError = document.getElementById("confirmPassword-error");
+
+// validating username
+if(userName.value == ""){
+userName.style.border= "2px solid red";
+userNameError.innerHTML = "usernmae is required";
+userNameError.style =  "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
+userName.focus();
+return false;
+}
+else if(userName.value.length<2 ){
+userName.style.border= "2px solid red";
+userNameError.innerHTML = "User Name must atleast 2 characters";
+userNameError.style = "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
+userName.focus();
+return false;
+}
+else if(userName.value.length >30){
+userName.style.border= "2px solid red";
+userNameError.innerHTML = "User Name cannot be more tham 30  characters";
+userNameError.style = "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
+userName.focus();
+return false;
+}
+else{
+	userName.style.border= "2px solid green";
+	userNameError.innerHTML = "";
+	email.focus();
+}
+
+// validating email
+
+
+}
+</script>
 </html>
