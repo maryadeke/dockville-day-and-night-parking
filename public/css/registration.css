@@ -90,6 +90,27 @@ button:hover{
 }
 .form-check form-check-inline{
     display: none;
-    color:red
+    color:red;
         
 }
+
+/* styles.css */
+
+/* Target the radio buttons and reduce their size */
+input[type="radio"] {
+    /* Set the desired width and height for the radio button */
+    width: 16px;
+    height: 16px;
+    
+    /* Optional: Add some margin to separate the radio button from the label */
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  
+  /* Optional: You can style the label associated with the radio button */
+  .form-check-label {
+    font-size: 14px; /* Set the desired font size for the label */
+    vertical-align: middle;
+    
+  }
+  

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>Registration Form</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script> -->
 <!-- <link href="css/style.css" rel="stylesheet" type="text/css" media="all" /> -->
 <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
 <link rel="stylesheet" href="/public/css/signup.css">
@@ -14,9 +14,12 @@
 		<h1>  SignUp Form</h1>
 		<div class="main-agileinfo">
 			<div class="agileits-top">
-				<form onsubmit="return Validate()" action="" method="post" name="signup">
-					<input class="text" type="text" name="Username" id="userName" placeholder="Username">
-					<span id="userName-error"></span>
+				<form onsubmit="return validate()" action="" method="post" name="signup">
+					<div>
+						<input class="text" type="text" name="username" id="userName" placeholder="Username">
+						<span id="userName-error"></span>
+					</div>
+					
 					<input class="text email" type="email" name="email" id="email" placeholder="Email" >
 					<span id="email-error"></span>
 					<input class="text" type="password" name="password" id="password" placeholder="Password" >
@@ -31,7 +34,8 @@
 						<div class="clear"> </div>
 					</div>
 					<!-- <a href="./home.html"> -->
-						<input type="button" value="SIGNUP">
+						<!-- <input type="button" onclick="validate()" value="SIGNUP"> -->
+						<button type="submit" class="btn" onclick="validate()"> SIGNUP</button>
 					<!-- </a> -->
 					
 				</form>
@@ -79,7 +83,7 @@ let confirmPasswordError = document.getElementById("confirmPassword-error");
 // validating username
 if(userName.value == ""){
 userName.style.border= "2px solid red";
-userNameError.innerHTML = "usernmae is required";
+userNameError.innerHTML = "username is required";
 userNameError.style =  "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
 userName.focus();
 return false;
@@ -105,8 +109,44 @@ else{
 }
 
 // validating email
+if (email.value == "") {
+    email.style.border = "2px solid red";
+    emailError.textContent = "Email is required";
+    emailError.style =
+      "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
+    email.focus();
+    return false;
+  }
+  let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
+  if (!email.value.match(emailRegex)) {
+    email.style.border = "2px solid red";
+    emailError.textContent = "The email address is not valid.";
+    emailError.style =
+      "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
+    email.focus();
+    return ;
+  } else {
+    email.style.border = "2px solid green";
+    emailError.textContent = "";
+    password.focus();
+  }
 
+//   validating password
+
+if (password.value.length <= 8) {
+        messages.push('Password must be at least 8 characters');
+    }
+    if (password. value.length >= 20) {
+        messages.push('Password must be at most 20 characters');
+    }
+    if (password. value === 'password'){
+        messages.push('password cannot be password');
+    }
+	if (messages.length > 0) {
+        errorElement.innerText = messages.join(', ');
+        e.preventDefault();
+    }
 }
 </script>
 </html>
