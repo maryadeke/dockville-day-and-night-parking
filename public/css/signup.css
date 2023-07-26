@@ -30,6 +30,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     border-collapse: collapse;
     border-spacing: 0;
   }
+  form{
+    align-items: center;
+  }
   
   /*-- start editing from here --*/
   a {
@@ -104,23 +107,25 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   body {
     background: #76b852;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #b88f52, #8DC26F);
+    background: -webkit-linear-gradient(to top, #ADD8E6, #ADD8E6);
     background: -moz-linear-gradient(to top, #76b852, #8DC26F);
     background: -o-linear-gradient(to top, #76c918, #8DC26F);
-    background: linear-gradient(to top, #b88e52, #c2996f);
+    background: linear-gradient(to top, #ADD8E6, #ADD8E6);
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Roboto', sans-serif;
+    
   }
   
   h1 {
     font-size: 3em;
     text-align: center;
-    color: #fff;
+    color:black;
     font-weight: 100;
     text-transform: capitalize;
     letter-spacing: 4px;
     font-family: 'Roboto', sans-serif;
+    font-weight: bold;
   }
   
   /*-- main --*/
@@ -199,12 +204,13 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     color: #fff;
   }
   
-  input[type="button"] {
+  button[type="submit"] {
     font-size: .9em;
     color: #fff;
-    background: #76b852;
+    /* background: linear-gradient(215deg, gold, blue) ; */
+    background: blue;
     outline: none;
-    border: 1px solid #76b852;
+    border: 1px solid blue;
     cursor: pointer;
     padding: 0.9em;
     -webkit-appearance: none;
@@ -213,13 +219,14 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     letter-spacing: 4px;
   }
   
-  input[type="button"]:hover {
+  button[type="submit"]:hover {
     -webkit-transition: .5s all;
     -moz-transition: .5s all;
     -o-transition: .5s all;
     -ms-transition: .5s all;
     transition: .5s all;
-    background: #8DC26F;
+    background:gold;
+    color: blue;
   }
   
   .agileits-top p {
@@ -231,7 +238,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   }
   
   .agileits-top p a {
-    color: #fff;
+    color: blue;
     -webkit-transition: .5s all;
     -moz-transition: .5s all;
     transition: .5s all;
@@ -239,7 +246,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   }
   
   .agileits-top p a:hover {
-    color: #76b852;
+    color: gold ;
   }
   
   /*-- //main --*/
@@ -253,7 +260,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   }
   
   input.checkbox {
-    background: #8DC26F;
+    background: blue;
     cursor: pointer;
     width: 1.2em;
     height: 1.2em;
@@ -328,7 +335,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   
   .colorlibcopy-agile p {
     font-size: .9em;
-    color: #fff;
+    color:black;
     line-height: 1.8em;
     letter-spacing: 1px;
     font-weight: 100;
@@ -344,7 +351,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   }
   
   .colorlibcopy-agile p a:hover {
-    color: #000;
+    color: gold;
   }
   
   /*-- //copyright --*/
@@ -369,6 +376,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     width: 40px;
     height: 40px;
     background-color: rgba(255, 255, 255, 0.15);
+    background: linear-gradient(215deg, gold, blue) ;
     bottom: -160px;
     -webkit-animation: square 20s infinite;
     -moz-animation: square 250s infinite;
@@ -424,7 +432,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     -o-animation-duration: 22s;
     -ms-animation-duration: 22s;
     animation-duration: 22s;
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: #f9e593;
   }
   
   .colorlib-bubbles li:nth-child(5) {
@@ -474,7 +482,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     animation-delay: 2s;
     -webkit-animation-duration: 40s;
     animation-duration: 40s;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color:grey;
   }
   
   .colorlib-bubbles li:nth-child(10) {
@@ -611,7 +619,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       margin: 1.5em 0;
     }
   
-    input[type="button"] {
+    input[type="submit"] {
       margin: 2em 0;
     }
   
@@ -674,12 +682,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       margin-top: 1.5em;
     }
   
-    input[type="button"] {
+    button[type="submit"] {
       margin: 2em 0 1.5em;
       letter-spacing: 3px;
     }
   
-    input[type="button"] {
+    button[type="submit"] {
       margin: 2em 0 1.5em;
     }
   
@@ -736,7 +744,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       background-position: 0 0px;
     }
   
-    input[type="button"] {
+    button[type="submit"] {
       margin: 1.5em 0;
       padding: 0.8em;
       font-size: .85em;
