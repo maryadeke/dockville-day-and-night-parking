@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
 }
-section
-{
+
+section {
     position: relative;
     width: 100%;
     height: auto;
@@ -13,7 +13,31 @@ section
     flex-direction: column;
     justify-content: center;
 }
-.form-design{
+
+.menu {
+    background-image: url(/public/images/front-right-side-blue-sedan-car.jpg);
+    display: flex;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.overlay{
+
+    position: relative;
+    height: 95vh;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    
+    
+}
+
+.other-information {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.form-design {
     margin: 0;
     position: relative;
     width: 100%;
@@ -23,7 +47,8 @@ section
     justify-content: space-around;
     align-items: center;
 }
-.cols input{
+
+.cols input {
     border: 1px solid green;
     height: 35px;
     text-align: center;
@@ -33,92 +58,110 @@ section
     outline: none;
     border-radius: 10px;
 }
-.cols input[type="date"]{
+
+.cols input[type="date"] {
     width: 100px;
     outline: none;
 }
-.cols input[type="time"]{
+
+.cols input[type="time"] {
     width: 100px;
     outline: none;
 }
-select{
+
+select {
     padding: 5px;
     border-radius: 8px;
     outline: none;
- }
- .menu{
+}
+
+.menu {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
- }
- fieldset{
+}
+
+fieldset {
     position: relative;
     width: auto;
     padding: 15px;
- }
-.padding{
+}
+
+.padding {
     position: relative;
     padding: 124px;
 }
-.card-a{
+
+.card-a {
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    /* padding: 15px; */
+    padding: 1px;
     margin: 5px;
     width: 230px;
-    box-shadow:  0 0 5px black;
+    box-shadow: 0 0 10px black;
     height: auto;
     border-radius: 8px;
-    background-color:antiquewhite;
+    background-color: white;
     transition: 0.1s ease;
-}
-.card-a:hover{
-padding: 8px;
+    flex-wrap: wrap;
 
 
 
 }
-.card-a td{
+
+
+.card-a:hover {
+    padding: 2px;
+
+
+
+}
+
+.card-a td {
     padding: 5px;
 }
-.card-a button{
+
+.card-a button {
     border: none;
-    background: black;
-    color:aquamarine;
+    background: linear-gradient(gold, blue);
+    color: white;
     padding: 0 25px;
     height: 35px;
     border-radius: 50px;
     font-weight: bold;
     transition: 0.1s ease-in;
 }
-.card-a button:hover{
-    padding:10px 10px 10px;
-background-color:orangered;
+
+.card-a button:hover {
+    padding: 0 25px;
+    background-color: blue;
     cursor: pointer;
     outline: none;
-    color:white;  
-    
+    color: white;
+
 
 }
-legend{
+
+legend {
     font-family: 'Times New Roman', Times, serif;
     font-size: 28px;
     text-decoration: overline;
     margin-bottom: 10px;
 }
 
-.sub-menu{
+.sub-menu {
     position: relative;
     width: 300px;
     margin-left: 25px;
     padding: 15px;
 }
-#truck-background{
+
+#truck-background {
     width: 100%;
     height: 200px;
     background: url(/public/images/truck.jpg);
@@ -128,7 +171,8 @@ legend{
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
 }
-.taxi-background{
+
+.taxi-background {
     width: 100%;
     height: 200px;
     background: url(/public/images/taxi.jpeg);
@@ -138,7 +182,8 @@ legend{
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
 }
-.coaster-background{
+
+.coaster-background {
     width: 100%;
     height: 200px;
     background: url(/public/images/bus.jpg);
@@ -148,7 +193,8 @@ legend{
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
 }
-.boda-background{
+
+.boda-background {
     width: 100%;
     height: 200px;
     background: url(/public/images/boda.jpg);
@@ -158,7 +204,8 @@ legend{
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
 }
-.personal-background{
+
+.personal-background {
     width: 100%;
     height: 200px;
     background: url(/public/images/perso-car.jpg);
@@ -168,34 +215,49 @@ legend{
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
 }
-header{
+
+header {
     position: relative;
     width: 100%;
     height: 45vh;
 }
-legend{
+
+legend {
     font-family: 'Times New Roman', Times, serif;
-    color:green;
+    color: white;
     transition: 0.1s ease-in;
 }
-legend:hover{
-    padding:10px 10px 10px;
+
+legend:hover {
+    padding: 10px 10px 10px;
     /* width:70px; */
-    color:black;
-    border:none ;
-    border-bottom: 4px solid orangered ;
+    color: black;
+    border: none;
+    border-bottom: 4px solid gold;
 }
-fieldset{
-    background: rgb(207, 130, 81);
-    
+
+fieldset {
+    background:
+
 }
-select{
-    color:blue;
+
+select {
+    color: blue;
     font-weight: 10px;
 }
-section{
-    color:black;
+
+section {
+    color: white;
 }
-td{
-    color:green;
+
+td {
+    color: blue;
+}
+
+h4 {
+    color: black;
+}
+
+.radio {
+    /* color: blue; */
 }
