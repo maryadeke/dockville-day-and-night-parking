@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+body{
+    position: relative;
+    display: flex;
+    font-family: sans-serif;
+    flex-wrap: wrap;
+    
+}
+    
+.wrap{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.content{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+}
+.button{
+    color: aqua;
+
+}
+
+.btn{
+    width: 120px;
+    height: 50px;
+    
+}

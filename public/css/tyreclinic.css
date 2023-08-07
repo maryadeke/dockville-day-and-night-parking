@@ -1,0 +1,148 @@
+ header {
+     position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* width:100%; */
+    /* height: 50vh; */
+    /* background: url(/public/images/bat-2.jpg); */
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    display: flex;
+    color: beige;
+     */
+}
+/* .overlay{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+     background: rgba(0,0,0,0.5);
+    text-align: center;
+     justify-content: center; 
+    align-items: center; 
+    font-family: sans-serif;
+    color: beige; 
+    padding-top:150px ;
+}
+body{
+    font-family: sans-serif;
+    background: rgb(207, 130, 81);
+} */
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+  }
+  body{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #808080;
+    background: url(/public/images/tyre.jpg);
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+    
+  }
+  #card-1{
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 34px 0 10px;
+  box-shadow:  0 0 10px rgba(0,0,0,0.9);
+  align-items: center;
+  flex-direction: column;
+  width: 75vh;
+  height: 75vh;
+  background:skyblue;
+  border:blue;
+  }
+  #card2{
+  position: relative;
+  display: flex;
+  background:chocolate;
+  border-radius: 34px 0 10px;
+  box-shadow:  0 0 10px rgba(0,0,0,0.9);
+  align-items: center;
+  float: left;
+  justify-content: center;
+  flex: ;
+  width: 75vh;
+  height: 65vh;
+  }
+  
+  .wrap{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    height: 80px;
+    text-transform: uppercase;
+    color: aliceblue;
+    border: none;
+  }
+  .wrap h3:nth-child(1){
+    background:linear-gradient(gold,blue);
+    padding: 25px;
+    border-radius: 5px;
+    margin-right:10px;
+  }
+  .wrap h3:nth-child(2){
+    background:linear-gradient(gold,blue);
+    padding: 25px;
+    border-radius: 5px;
+  }
+  .wrap h3:nth-child(3){
+    background:linear-gradient(gold,blue);
+    padding: 25px;
+    border-radius: 5px;
+    margin-right:10px;
+   margin-left:10px ;
+  }
+  
+  .content{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 140px;
+    align-items: center;
+    flex-direction: row;
+  }
+  .content strong{
+    margin-bottom:10px ;
+  }
+  .header-card{
+  font-size: 30px;
+  text-transform: uppercase;
+  font-style: italic;
+  -webkit-text-stroke: 1px black;
+  /* text for card you can change em.. */
+  color: transparent;
+  }
+  select{
+    border: 1px double blue;
+    padding: 6px;
+    border-radius: 6px;
+  }
+  .button>#button-hover{
+    transition: .5s  ease;
+  }
+  .button::after{
+    position: absolute;
+    display: block;
+  }
+  #button-hover{
+    position:relative ;
+    display:none;
+    height: 200px;
+    width: 200px;
+    background-color: blueviolet;
+  }
+  
+  
+  

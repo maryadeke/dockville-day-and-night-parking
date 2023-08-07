@@ -4,10 +4,10 @@
 }
 body{
     font-family: sans-serif;
-    background: rgb(207, 130, 81);
+   background: skyblue;
 }
 #cards .tyre,.parking,.battery{
-    background: #fff;
+    background:aliceblue;
     box-shadow: 0 0 12px rgba(0, 0, 0,0.5);
     text-align: center;
     align-items: center;
@@ -19,15 +19,15 @@ body{
 }
 #cards .tyre h3{
     text-transform: uppercase;
-    color:rgb(235, 54, 9);
+    color:blue ;
 }
 #cards .parking h3{
     text-transform: uppercase;
-    color:rgb(235, 54, 9);
+    color:blue;
 }
 #cards .battery h3{
     text-transform: uppercase;
-    color:rgb(235, 54, 9);
+    color:blue;
 }
 
 #cards{
@@ -89,19 +89,69 @@ header{
     
     }
 }
-button{
-    padding: 0 auto;
-    justify-content:centre;
-    position: relative;
-    color:white;
-    background-color: green;
-    font-size:15px ;
-    border: none;
-    border-radius: 30px;
-    
 
-}
+
+
+header nav{
+    position: relative;
+    /* top: 25px; */
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        background: rgba(0,0,0,0.5);
+        width: 100%;
+        height: 12vh;
+    }
+    header nav ul{
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        width: 260px;
+        height: 8vh;
+    }
+    header nav ul li,a{
+        margin-top: 30px;
+        list-style-type: none;
+        text-decoration:none;
+        text-transform: capitalize;
+        /* font-weight: bold; */
+        color: blue;
+        transition: 0.1s  ease-in;
+    }
     
+    header nav ul a:hover{
+        /* background: linear-gradient(340deg, #0fff, purple); */
+        padding:10px 10px 10px;
+        width:60px;
+        margin: 5px 5px 5px 5px;
+        color:gold;
+        border-radius: 50px;
+        border:none;
+        border-bottom:2px solid blue;
+    }
+    button{
+        margin-top:30px ;
+        justify-content:centre;
+        position: relative;
+        color:blue;
+        background-color:gold;
+        font-size:15px ;
+        border-radius: 30px;
+        padding:10px ;
+        border-top:red ;
+
+    } 
+    button:hover{
+        padding:10px 10px 10px;
+        /* width:60px; */
+        /* margin: 5px 5px 5px 5px; */
+        color:gold;
+        border-radius: 50px;
+        /* border:none; */
+        border-bottom:2px solid blue; 
+        background: black;
+    }
+
     
 
 

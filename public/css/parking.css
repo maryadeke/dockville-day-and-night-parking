@@ -236,10 +236,7 @@ legend:hover {
     border-bottom: 4px solid gold;
 }
 
-fieldset {
-    background:
 
-}
 
 select {
     color: blue;
@@ -258,6 +255,3 @@ h4 {
     color: black;
 }
 
-.radio {
-    /* color: blue; */
-}
