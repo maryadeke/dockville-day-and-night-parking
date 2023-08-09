@@ -11,7 +11,7 @@
 
 <body>
     <div class="registration-form">
-        <form id="formId" onsubmit="return Validate()" name="register">
+        <form id="formId" onsubmit="return validate()" name="register">
             <header align="center" style="font-size: 2vw !important">
                 CLIENT REGISTRATION
             </header>
@@ -314,7 +314,7 @@
                     <tr>
                         <td>
                             <label for="exampleFormControlInput1" class="form-label">Gender</label><br />
-                            <select name="make" id="make" size="1" class="searchFormField sel home-input-width j-sf-input" data-index-no="2" data-facet-name="make">
+                            <select name="gender" id="gender" size="1" class="searchFormField sel home-input-width j-sf-input" data-index-no="2" data-facet-name="make">
                                 <option value="" disabled selected>select gender</option>
                                 <option value="4.00">male</option>
                                 <option value="4.00/4.25">female</option>
@@ -465,7 +465,7 @@
             <!-- <div class="mb-3"></div> -->
 
             <div flex="center">
-                <button type="submit" class="btn btn-primary btn-lg" id="submitBtn" onclick="Validate()">
+                <button type="submit" class="btn btn-primary btn-lg" id="submitBtn" onclick="validate(event)">
                     Submit
                 </button>
             </div>
@@ -474,7 +474,8 @@
     <br /><br /><br /><br /><br />
     <hr />
     <footer></footer>
-    <script src="/public/js/registration-script.js"></script>
+    <script src="/public/js/tireform.js"></script>
+    <!-- <script src="/public/js/registration-script.js"></script> -->
 </body>
 
 </html>
