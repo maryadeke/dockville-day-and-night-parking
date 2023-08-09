@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tire clinic</title>
+    <link rel="stylesheet" href="/public/css/newtireclinic.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+   <link rel="stylesheet" href="https://code.jquery.com/jquery-3.6.0.js">
+   <link rel="stylesheet" href="/public/css/home.css">
+   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> 
+   <script>
+    $(document).ready(function() {
+        $('#icon').click(function() {
+            $('ul').toggleClass('show')
+        })
+    })
+   </script>
+</head>
+<body>
+    <nav>
+        <label class="logo"> DOCKVILLE TIRE-CLINIC</label>
+        <ul>
+            <li><a class="active" href="">services</a></li>
+            <li><a href="/public/html/bysize.html">by Size</a></li>
+            <li><a href="/public/html/bycarmodel.html">by Car-model</a></li>
+            <li><a href="/public/html/bymake.html">by Make</a></li>
+            l<li><a href="/public/html/home.html">Home</a></li>
+           
+        </ul>
+        <label id="icon">
+            <i class="  fas fa-bars"></i>
+        </label>
+        
+    </nav>
+    <section>
+        <p>dfjnblremlorem12 Lorem ipsum dolor sit <amet class="lorem5"></amet></p>
+        <div id="cards">
+            <div class="battery">
+                <div class="svg">
+                    <img src="/public/images/tirepressure.jpg" alt="battery" width="80">
+                </div>
+                <h3>BATTERY section</h3>
+                <p>Batteries are hired based on their sizes </p>
+                <p>click down below to find more information</p>
+                <button> click here</button>
+            </div>
+            <div class="parking">
+                <div class="svg">
+                    <img src="/public/images/puncturefixing.webp" alt="battery" width="80">
+                </div>
+                <h3> the parking-unit</h3>
+                <p>Vehicles of different models and types are parked depending on the period of parking </p>
+                <p>click down below to find more information </p>
+                   <a href="./parking.html">
+                    <button> click here</button>
+                   </a>
+                    
+                 
+            </div>
+            <div class="tyre">
+                <div class="svg">
+                    <img src="/public/images/valves.jpeg" alt="battery" width="80">
+                </div>
+                <h3> car TYRE CLINIC</h3>
+                <p>tyres are identified by tyre-sizes, make and intended carmodel(s) </p>
+                <p>click down below to find more information</p>
+                    <a href="/public/html/tyreclinic.html">
+                        
+                    </a>
+                
+                
+            </div>
+            </div>
+    </section>
+</body>
+</html>
