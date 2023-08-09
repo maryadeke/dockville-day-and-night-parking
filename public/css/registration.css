@@ -169,18 +169,10 @@ input[type="radio"] {
   }
   
   
-  .checkbox{
-    /* position: relative;
-    display: flex;
-    display: inline;
-    color:yellow;
-    background: red;
-     width:10px;
-     padding: 1px;
-     align-items: center; */
+  
 
     
-  }
+  
   .checkbox {
     display: inline-flex;
     align-items: center;

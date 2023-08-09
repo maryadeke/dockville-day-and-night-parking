@@ -1,7 +1,9 @@
+document.addEventListener('DOMContentLoaded',function(e) {
 const btn = document.querySelector(".btn");
 btn.addEventListener("click", validate);
 function validate(e) {
   e.preventDefault();
+
   // picking input fields with their names or IDs
   let firstName = document.getElementById("firstName");
   let lastName = document.getElementById("lastName");
@@ -13,9 +15,9 @@ function validate(e) {
   let carType = document.getElementById("car-type");
   let vehicleModel = document.getElementById("vehicleModel");
   let vehicleColor = document.getElementById("vehicleColor");
-  let registrationTime = document.getElementById("registrationTime");
-  let registrationDate = document.getElementById("registrationDate");
-
+  // let registrationTime = document.getElementById("registrationTime");
+  // let registrationDate = document.getElementById("registrationDate");
+  let carModel = document.getElementById("carModel");
   // picking error fields
   let firstNameError = document.getElementById("firstName-error");
   let lastNameError = document.getElementById("lastName-error");
@@ -27,8 +29,8 @@ function validate(e) {
   let carTypeError = document.getElementById("carType-error");
   let vehicleModelError = document.getElementById("vehicleModel-error");
   let vehicleColorError = document.getElementById("vehicleColor-error");
-  let dateTimeError = document.getElementById("dateTime-error");
-
+  // let dateTimeError = document.getElementById("dateTime-error");
+  let carModelError = document.getElementById("carModel-error");
   // validating first name
   if (firstName.value == "") {
     firstName.style.border = "2px solid red";
@@ -36,21 +38,21 @@ function validate(e) {
     firstNameError.style =
       "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
     firstName.focus();
-    e ++;
+    e++;
   } else if (firstName.value.length < 2) {
     firstName.style.border = "2px solid red";
     firstNameError.innerHTML = "First Name must be at least 2 characters";
     firstNameError.style =
       "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
     firstName.focus();
-    e ++;
+    e++;
   } else if (firstName.value.length > 20) {
     firstName.style.border = "2px solid red";
     firstNameError.innerHTML = "First Name cannot be more than 20 characters";
     firstNameError.style =
       "color: red; font-size:11px;  font-family: helvetica,Arial,sans-serif";
     firstName.focus();
-    e ++;
+    e++;
   } else {
     firstName.style.border = "2px solid green";
     firstNameError.innerHTML = "";
@@ -64,21 +66,21 @@ function validate(e) {
     lastNameError.style =
       "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
     lastName.focus();
-    e ++;
+    e++;
   } else if (lastName.value.length < 2) {
     lastName.style.border = "2px solid red";
     lastNameError.innerHTML = "Last Name must be at least 2 characters";
     lastNameError.style =
       "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
     lastName.focus();
-    e ++;
+    e++;
   } else if (lastName.value.length > 20) {
     lastName.style.border = "2px solid red";
     lastNameError.innerHTML = "Last Name cannot be more than 20 characters";
     lastNameError.style =
       "color: red; font-size:11px;  font-family: helvetica,Arial,sans-serif";
     lastName.focus();
-    e ++;
+    e++;
   } else {
     lastName.style.border = "2px solid green";
     lastNameError.innerHTML = "";
@@ -92,7 +94,7 @@ function validate(e) {
     emailError.style =
       "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
     email.focus();
-    e ++;
+    e++;
   }
   let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
@@ -102,7 +104,7 @@ function validate(e) {
     emailError.style =
       "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
     email.focus();
-    e ++;
+    e++;
   } else {
     email.style.border = "2px solid green";
     emailError.textContent = "";
@@ -116,7 +118,7 @@ function validate(e) {
     ninNumberError.style =
       "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
     ninNumber.focus();
-    e ++;
+    e++;
   }
   const ninNumberRegex = /^CF([a-zA-Z0-9]{12})+$/;
   const ninNumberRegex2 = /^CF([a-zA-Z0-9]{12})+$/;
@@ -132,7 +134,7 @@ function validate(e) {
     ninNumberError.style =
       "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
     ninNumber.focus();
-    e ++;
+    e++;
   } else {
     ninNumber.style.border = "2px solid green";
     ninNumberError.innerHTML = "";
@@ -145,7 +147,7 @@ function validate(e) {
     phoneNumberError.style =
       "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
     phoneNumber.focus();
-    e ++;
+    e++;
   }
   let phoneNumberRegex =
     /^(\+256|0)(77[0-9]|72[0-9]|74[0-9]|78[0-9]|70[0-9]|71[0-9]|75[0-9]|76[0-9]|79[0-9])(\d{6})$/;
@@ -156,7 +158,7 @@ function validate(e) {
     phoneNumberError.style =
       "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
     phoneNumber.focus();
-    e ++;
+    e++;
   } else {
     phoneNumber.style.border = "2px solid green";
     phoneNumberError.innerHTML = "";
@@ -183,7 +185,7 @@ function validate(e) {
     uniqueNumber.style.border = "2px solid red";
     uniqueNumberError.textContent = "Enter a valid unique number";
     uniqueNumber.focus();
-    e ++;
+    e++;
   } else {
     uniqueNumber.style.border = "2px solid green";
     uniqueNumberError.textContent = "";
@@ -197,11 +199,25 @@ function validate(e) {
     carTypeError.style =
       "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
     carType.focus();
-    e ++;
+    e++;
   } else {
     carType.style.border = "2px solid green";
     carTypeError.textContent = "";
     numberPlate.focus();
+  }
+
+  // validating car model
+  if (carModel.value == "") {
+    carModel.style.border = "2px solid red";
+    carModelError.innerHTML = "Car Model is required";
+    carModelError.style =
+      "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
+    carModel.focus();
+    e++;
+  } else {
+    carModel.style.border = "2px solid green";
+    carModelError.textContent = "";
+    // make.focus();
   }
 
   //validating number plate
@@ -210,15 +226,14 @@ function validate(e) {
     numberPlateError.innerHTML = "Number Plate is required";
     numberPlateError.style =
       "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
-    e ++;
+    e++;
   }
 
   var numberPlateRegex = /^[U][A-Z0-9]{6}$/;
   if (!numberPlate.value.match(numberPlateRegex)) {
-    numberPlateError.innerHTML=
-      "Number plate must start with a capital 'U' followed by 6 alphanumeric characters."
-    ;
-    e ++;
+    numberPlateError.innerHTML =
+      "Number plate must start with a capital 'U' followed by 6 alphanumeric characters.";
+    e++;
   } else {
     numberPlate.style.border = "2px solid green";
     numberPlateError.innerHTML = "";
@@ -231,7 +246,7 @@ function validate(e) {
     vehicleModelError.style =
       "color:red; font-size:11px; font-family: helvetica,Arial,sans-serif";
     vehicleModel.focus();
-    e ++;
+    e++;
   } else {
     vehicleModel.style.border = "2px solid green";
     vehicleModelError.innerHTML = "";
@@ -246,7 +261,7 @@ function validate(e) {
     vehicleColorError.style.fontSize = "11px";
     vehicleColorError.style.fontFamily = "helvetica, Arial, sans-serif";
     vehicleColor.focus();
-    e ++;
+    e++;
   } else {
     vehicleColor.style.border = "2px solid green";
     vehicleColorError.innerHTML = "";
@@ -254,7 +269,7 @@ function validate(e) {
 }
 // validating date and time
 
-function validateDateTime() {
+function validateDateTime(e) {
   const registrationTime = document.getElementById("registrationTime").value;
   const registrationDate = document.getElementById("registrationDate").value;
 
@@ -268,7 +283,7 @@ function validateDateTime() {
       "helvetica, Arial, sans-serif";
     document.getElementById("registrationTime").style.border = "2px solid red";
     document.getElementById("registrationDate").style.border = "2px solid red";
-    e ++;
+    e++;
   } else {
     // Combine date and time into a single string in the format "dd-mm-yyyy HH:mm"
     const dateTimeString =
@@ -284,7 +299,7 @@ function validateDateTime() {
       document.getElementById("dateTime-error").style.fontFamily =
         "helvetica, Arial, sans-serif";
 
-      e ++;
+      e++;
     } else {
       // Valid date and time, clear the error message if any
       document.getElementById("dateTime-error").textContent = "";
@@ -308,19 +323,26 @@ function formatDate(registrationDate) {
 }
 
 // Call the validateDateTime function when the form is submitted
-function Validate() {
+function Validate(e) {
   // ... Other validation code ...
 
   // Validate date and time
-  const isDateTimeValid = validateDateTime();
+  const isDateTimeValid = validateDateTime(e);
 
   // e ++ if any validation failed
   if (!isDateTimeValid) {
-    e ++;
+    e++;
   }
 
   // ... Other validation code ...
 
   // Return true if all validations passed
   return true;
-}
+  //  If there are validation errors, don't submit the form
+  if (e > 0) {
+    return false;
+  }
+
+  // If all validations passed, submit the form
+  return true;
+}});
