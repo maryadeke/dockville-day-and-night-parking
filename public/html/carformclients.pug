@@ -1,0 +1,61 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+  // <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  link(rel='stylesheet' href='/css/table.css')
+main.table
+  section.table_header
+  h1 clients
+  section.table_body
+    table
+      thead
+        tr
+            th(scope='col') firstName
+            th(scope='col') lastName
+            th(scope='col') email
+            th(scope='col') phone Number
+            th(scope='col') numberplate
+            th(scope='col') unique Number
+            th(scope='col') time 
+            th(scope='col') delete
+            th(scope='col') edit 
+      tbody
+        if clients.length 
+        each client in clients
+            tr
+            td #{client.firstname}
+            td #{client.lastname}
+            td #{client.email}
+            td #{client.phonenumber}
+            td #{client.numberplate}
+            td #{client.uniquenumber}
+            td #{client.time}
+        
+            td 
+              form(action="/api/carClient/delete" method="POST")
+                input(type="hidden" name="id" value=client._id)
+                //- we are hidding the ids not to be displayed
+                button.btn.btn-danger(type="submit" onclick="confirmDelete()") Delete
+            td
+//-               a.btn.btn-warning(href="/api/employee/edit/" + employee._id) Edit 
+//-               //- a(href=`/api/employee/edit/${employee._id} `) 
+
+//-     else
+//-         p there are no employees in the database 
+//- script.
+//-       function confirmDelete() {
+//-         // Display the confirmation alert and store the result in a variable
+//-         var confirmed = confirm('Are you sure you want to delete this field?');
+
+//-         // Check the user's choice
+//-         if (confirmed) {
+//-           // User clicked "OK" in the confirmation alert, perform the delete action here
+//-           // For example, you can submit a form, make an AJAX call, etc.
+//-           console.log('Field deleted!'); // Replace this with the actual delete action
+//-         } else {
+//-           // User clicked "Cancel" in the confirmation alert, do nothing or handle accordingly
+//-           console.log('Field not deleted!');
+//-         }
+//-       }

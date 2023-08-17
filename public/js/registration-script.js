@@ -338,6 +338,26 @@
 
     // ... Other validation code ...
 
+    const genderRadios = document.getElementsByName("gender");
+    let selectedGender = false;
+  
+    for (const radio of genderRadios) {
+      if (radio.checked) {
+        selectedGender = true;
+        break;
+      }
+    }
+  
+    const errorDiv = document.getElementById("error");
+  
+    if (!selectedGender) {
+      errorDiv.style.color = "red";
+      errorDiv.textContent = "Please select a gender";
+    } else {
+      errorDiv.textContent = "";
+      // Perform other actions if validation passes
+    }
+  
     // Return true if all validations passed
     return true;
     

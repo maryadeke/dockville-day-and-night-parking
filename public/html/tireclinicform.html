@@ -1,481 +1,806 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link rel="stylesheet" href="/public/css/bootstrap.css"> -->
     <link rel="stylesheet" href="/public/css/registration.css" />
     <title>registration form</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="registration-form">
-        <form id="formId" onsubmit="return validate()" name="register">
-            <header align="center" style="font-size: 2vw !important">
-                CLIENT REGISTRATION
-            </header>
-            <br />
+      <form id="formId" onsubmit="return validate(event)" name="register">
+        <header align="center" style="font-size: 2vw !important">
+          CLIENT REGISTRATION
+        </header>
+        <br />
 
-            <div class="mb-3">
-                <table>
-                    <tr>
-                        <td>
-                            <label for="exampleFormControlInput1" class="form-label">First Name</label><br />
-                            <input type="text" class="form-control" id="firstName" name="firstname"
-                                placeholder="Enter your first Name" />
-                            <br />
-                            <span id="firstName-error"></span>
-                        </td>
-                        <td>
-                            <label for="exampleFormControlInput1" class="form-label">Last Name</label><br />
-                            <input type="text" class="form-control" id="lastName" name="lastname"
-                                placeholder="Enter your last Name" />
-                            <br />
-                            <span id="lastName-error"></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="exampleFormControlInput1" class="form-label">Email</label><br />
-                            <input type="email" class="form-control" name="email" id="email"
-                                placeholder="Enter your email here" />
-                            <br />
-                            <span id="email-error"></span>
-                        </td>
-                        <td>
-                            <label for="exampleFormControlInput1" class="form-label">Phone number</label><br />
-                            <input type="tel" class="form-control" name="phonenumber" id="phoneNumber"
-                                placeholder="Enter your phone number" />
-                            <br />
-                            <span id="phoneNumber-error"></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <label for="exampleFormControlInput1" class="form-label">NIN number</label><br />
-                            <input type="text" class="form-control" name="ninnumber" id="ninNumber"
-                                placeholder="Enter your NIN number"  style="width:90% !important;"> <br />
-                            <span id="ninNumber-error"></span>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <!-- <div class="mb-3"></div> -->
-            <!-- <div class="mb-3"></div> -->
-            <!-- <div class="mb-3"></div> -->
-            <!-- <div class="mb-3"></div> -->
-            <div class="mb-3">
-                <div class="checkbox">
-                    <input class="checkbox" type="checkbox" id="inlineCheckbox1" value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">tire pressure</label>
+        <div class="mb-3">
+          <table>
+            <tr>
+              <td>
+                <label for="exampleFormControlInput1" class="form-label"
+                  >First Name</label
+                ><br />
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  name="firstname"
+                  placeholder="Enter your first Name"
+                />
+                <br />
+                <span id="firstName-error"></span>
+              </td>
+              <td>
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Last Name</label
+                ><br />
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  name="lastname"
+                  placeholder="Enter your last Name"
+                />
+                <br />
+                <span id="lastName-error"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Email</label
+                ><br />
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  id="email"
+                  placeholder="Enter your email here"
+                />
+                <br />
+                <span id="email-error"></span>
+              </td>
+              <td>
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Phone number</label
+                ><br />
+                <input
+                  type="tel"
+                  class="form-control"
+                  name="phonenumber"
+                  id="phoneNumber"
+                  placeholder="Enter your phone number"
+                />
+                <br />
+                <span id="phoneNumber-error"></span>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >NIN number</label
+                ><br />
+                <input
+                  type="text"
+                  class="form-control"
+                  name="ninnumber"
+                  id="ninNumber"
+                  placeholder="Enter your NIN number"
+                  style="width: 90% !important"
+                />
+                <br />
+                <span id="ninNumber-error"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="mb-3">
+                  <div class="checkbox">
+                    <input
+                      class="checkbox"
+                      type="checkbox"
+                      id="inlineCheckbox1"
+                      value="option1"
+                    />
+                    <label class="form-check-label" for="inlineCheckbox1"
+                      >tire pressure</label
+                    >
                   </div>
                   <div class="checkbox">
-                    <input class="checkbox" type="checkbox" id="inlineCheckbox2" value="option2">
-                    <label class="form-check-label" for="inlineCheckbox2">puncture fixing</label>
+                    <input
+                      class="checkbox"
+                      type="checkbox"
+                      id="inlineCheckbox2"
+                      value="option2"
+                    />
+                    <label class="form-check-label" for="inlineCheckbox2"
+                      >puncture fixing</label
+                    >
                   </div>
                   <div class="checkbox">
-                    <input class="checkbox" type="checkbox" id="inlineCheckbox3" value="option3" >
-                    <label class="form-check-label" for="inlineCheckbox3">valves</label>
+                    <input
+                      class="checkbox"
+                      type="checkbox"
+                      id="inlineCheckbox3"
+                      value="option3"
+                    />
+                    <label class="form-check-label" for="inlineCheckbox3"
+                      >valves</label
+                    >
                   </div>
-            </div>
+                </div>
+              </td>
+            </tr>
+
+            <!-- <div class="mb-3"></div> -->
+            <!-- <div class="mb-3"></div> -->
+            <!-- <div class="mb-3"></div> -->
+            <!-- <div class="mb-3"></div> -->
+
             <div class="mb-3">
-                <table>
+              <tr>
+                <td>
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >Car model</label
+                  ><br />
+                  <div>
+                    <select
+                      class="carmodel"
+                      id="car-model"
+                      name="carmodel"
+                      size="1"
+                    >
+                      <option value="" disabled selected>
+                        select car model
+                      </option>
+
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/AIWAYS.png"
+                        value="AIWAYS"
+                      >
+                        AIWAYS
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/ALFAROMEO.png"
+                        value="ALFA ROMEO"
+                      >
+                        ALFA ROMEO
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/ALPINA.png"
+                        value="ALPINA"
+                      >
+                        ALPINA
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/ASTONMARTIN.png"
+                        value="ASTON MARTIN"
+                      >
+                        ASTON MARTIN
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/AUDI.png"
+                        value="AUDI"
+                      >
+                        AUDI
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/BAIC.png"
+                        value="BAIC"
+                      >
+                        BAIC
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/BENTLEY.png"
+                        value="BENTLEY"
+                      >
+                        BENTLEY
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/BMW.png"
+                        value="BMW"
+                      >
+                        BMW
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/BMWM.png"
+                        value="BMW M"
+                      >
+                        BMW M
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/BORGWARD.png"
+                        value="BORGWARD"
+                      >
+                        BORGWARD
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/BUGATTI.png"
+                        value="BUGATTI"
+                      >
+                        BUGATTI
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/BYD.png"
+                        value="BYD"
+                      >
+                        BYD
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/CADILLAC.png"
+                        value="CADILLAC"
+                      >
+                        CADILLAC
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/CHEVROLET.png"
+                        value="CHEVROLET"
+                      >
+                        CHEVROLET
+                      </option>
+
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/FAW.png"
+                        value="FAW"
+                      >
+                        FAW
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/FERRARI.png"
+                        value="FERRARI"
+                      >
+                        FERRARI
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/FIAT.png"
+                        value="FIAT"
+                      >
+                        FIAT
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/FISKER.png"
+                        value="FISKER"
+                      >
+                        FISKER
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/FORD.png"
+                        value="FORD"
+                      >
+                        FORD
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/GENESIS.png"
+                        value="GENESIS"
+                      >
+                        GENESIS
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/HONDA.png"
+                        value="HONDA"
+                      >
+                        HONDA
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/HYUNDAI.png"
+                        value="HYUNDAI"
+                      >
+                        HYUNDAI
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/INEOS.png"
+                        value="INEOS"
+                      >
+                        INEOS
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/INFINITI.png"
+                        value="INFINITI"
+                      >
+                        INFINITI
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/ISUZU.png"
+                        value="ISUZU"
+                      >
+                        ISUZU
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/IVECO.png"
+                        value="IVECO"
+                      >
+                        IVECO
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/JAGUAR.png"
+                        value="JAGUAR"
+                      >
+                        JAGUAR
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/JEEP.png"
+                        value="JEEP"
+                      >
+                        JEEP
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/KIA.png"
+                        value="KIA"
+                      >
+                        KIA
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/KTM.png"
+                        value="KTM"
+                      >
+                        KTM
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/LADA.png"
+                        value="LADA"
+                      >
+                        LADA
+                      </option>
+
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/LANCIA.png"
+                        value="LANCIA"
+                      >
+                        LANCIA
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/LANDROVER.png"
+                        value="LAND ROVER"
+                      >
+                        LAND ROVER
+                      </option>
+
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/LEXUS.png"
+                        value="LEXUS"
+                      >
+                        LEXUS
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/LUCID.png"
+                        value="LUCID"
+                      >
+                        LUCID
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/LYNK&amp; CO.png"
+                        value="LYNK &amp; CO"
+                      >
+                        LYNK &amp; CO
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/MAN.png"
+                        value="MAN"
+                      >
+                        MAN
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/MASERATI.png"
+                        value="MASERATI"
+                      >
+                        MASERATI
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/MAXUS.png"
+                        value="MAXUS"
+                      >
+                        MAXUS
+                      </option>
+
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/MERCEDES-BENZ.png"
+                        value="MERCEDES-BENZ"
+                      >
+                        MERCEDES-BENZ
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/MG.png"
+                        value="MG"
+                      >
+                        MG
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/MINI.png"
+                        value="MINI"
+                      >
+                        MINI
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/MITSUBISHI.png"
+                        value="MITSUBISHI"
+                      >
+                        MITSUBISHI
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/NIO.png"
+                        value="NIO"
+                      >
+                        NIO
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/NISSAN.png"
+                        value="NISSAN"
+                      >
+                        NISSAN
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/OPEL.png"
+                        value="OPEL"
+                      >
+                        OPEL
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/ORA.png"
+                        value="ORA"
+                      >
+                        ORA
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/PEUGEOT.png"
+                        value="PEUGEOT"
+                      >
+                        PEUGEOT
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/POLESTAR.png"
+                        value="POLESTAR"
+                      >
+                        POLESTAR
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/PONTIAC.png"
+                        value="PONTIAC"
+                      >
+                        PONTIAC
+                      </option>
+
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/RENAULT.png"
+                        value="RENAULT"
+                      >
+                        RENAULT
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/ROLLS-ROYCE.png"
+                        value="ROLLS-ROYCE"
+                      >
+                        ROLLS-ROYCE
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/ROVER.png"
+                        value="ROVER"
+                      >
+                        ROVER
+                      </option>
+
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/SUBARU.png"
+                        value="SUBARU"
+                      >
+                        SUBARU
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/SUZUKI.png"
+                        value="SUZUKI"
+                      >
+                        SUZUKI
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/TESLA.png"
+                        value="TESLA"
+                      >
+                        TESLA
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/TOYOTA.png"
+                        value="TOYOTA"
+                      >
+                        TOYOTA
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/VOLKSWAGEN.png"
+                        value="VOLKSWAGEN"
+                      >
+                        VOLKSWAGEN
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/VOLVO.png"
+                        value="VOLVO"
+                      >
+                        VOLVO
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/WEY.png"
+                        value="WEY"
+                      >
+                        WEY
+                      </option>
+                      <option
+                        data-image="https://image.delti.com/simg/Logos/ZOTYE.png"
+                        value="ZOTYE"
+                      >
+                        ZOTYE
+                      </option>
+                    </select>
+                  </div>
+                  <span id="carModel-error"></span>
+                </td>
+                <td>
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >Make</label
+                  ><br />
+                  <select
+                    name="make"
+                    id="make"
+                    size="1"
+                    class="searchFormField sel home-input-width j-sf-input"
+                    data-index-no="2"
+                    data-facet-name="make"
+                  >
+                    <option value="" disabled selected>select tire make</option>
+                    <option value="4.00">for passenger cars</option>
+                    <option value="4.00/4.25">4*4s</option>
+                    <option value="4.00/4.50">sports utility</option>
+                    <option value="4.40/4.50">commercial vehicles</option>
+                  </select>
+                  <span id="make-error"></span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >Gender</label
+                  ><br />
+                  <select
+                    name="gender"
+                    id="gender"
+                    size="1"
+                    class="searchFormField sel home-input-width j-sf-input"
+                    data-index-no="2"
+                    data-facet-name="make"
+                  >
+                    <option value="" disabled selected>select gender</option>
+                    <option value="4.00">male</option>
+                    <option value="4.00/4.25">female</option>
+
+                    <span id="gender-error"></span>
+
+                    <td>
+                      <label for="">Tire size</label>
+                      <div class="colss">
+                        <!-- <input type="width" name="width" id="width" /> -->
+                        <select
+                          name="width"
+                          id="width"
+                          size="1"
+                          class="searchFormField sel home-input-width j-sf-input"
+                          data-index-no="2"
+                          data-facet-name="width"
+                        >
+                          <option value="" disabled selected>width</option>
+                          <option value="4.00">4.00</option>
+                          <option value="4.00/4.25">4.00/4.25</option>
+                          <option value="4.00/4.50">4.00/4.50</option>
+                          <option value="4.40/4.50">4.40/4.50</option>
+                          <option value="4.50">4.50</option>
+                          <option value="4.75/5.00">4.75/5.00</option>
+                          <option value="4.75/5.25">4.75/5.25</option>
+                          <option value="4.80">4.80</option>
+                          <option value="5">5</option>
+                          <option value="5.00">5.00</option>
+                          <option value="5.00/5.20">5.00/5.20</option>
+                          <option value="5.00/5.25">5.00/5.25</option>
+                          <option value="5.25/5.50">5.25/5.50</option>
+                          <option value="5.25/6.00">5.25/6.00</option>
+                          <option value="5.50">5.50</option>
+                          <option value="5.50/6.00">5.50/6.00</option>
+                          <option value="5.60">5.60</option>
+                          <option value="5.90">5.90</option>
+                          <option value="6.00">6.00</option>
+                          <option value="6.00/6.50">6.00/6.50</option>
+                          <option value="6.40">6.40</option>
+                          <option value="6.50">6.50</option>
+                          <option value="6.70">6.70</option>
+                          <option value="7.0">7.0</option>
+                          <option value="7.00">7.00</option>
+                          <option value="7.25">7.25</option>
+                          <option value="7.5">7.5</option>
+                          <option value="7.50">7.50</option>
+                          <option value="8.20">8.20</option>
+                          <option value="15/16">15/16</option>
+                          <option value="17">17</option>
+                          <option value="27x8.50">27x8.50</option>
+                          <option value="28x8.50">28x8.50</option>
+                          <option value="28x10.00">28x10.00</option>
+                          <option value="30x9.50">30x9.50</option>
+                          <option value="30x10.00">30x10.00</option>
+                          <option value="31x10.50">31x10.50</option>
+                          <option value="31x11.50">31x11.50</option>
+                          <option value="32x11.50">32x11.50</option>
+                          <option value="33x10.50">33x10.50</option>
+                          <option value="33x12.50">33x12.50</option>
+                          <option value="35x11.00">35x11.00</option>
+                          <option value="35x12.50">35x12.50</option>
+                          <option value="35x13.50">35x13.50</option>
+                          <option value="115">115</option>
+                          <option value="125">125</option>
+                          <option value="135">135</option>
+                          <option value="145">145</option>
+                          <option value="155">155</option>
+                          <option value="165">165</option>
+                          <option value="175">175</option>
+                          <option value="180">180</option>
+                          <option value="185">185</option>
+                          <option value="190">190</option>
+                          <option value="195">195</option>
+                          <option value="200">200</option>
+                          <option value="205">205</option>
+                          <option value="210">210</option>
+                          <option value="215">215</option>
+                          <option value="220">220</option>
+                          <option value="225">225</option>
+                          <option value="235">235</option>
+                          <option value="240">240</option>
+                          <option value="245">245</option>
+                          <option value="255">255</option>
+                          <option value="265">265</option>
+                          <option value="275">275</option>
+                          <option value="285">285</option>
+                          <option value="295">295</option>
+                          <option value="305">305</option>
+                          <option value="315">315</option>
+                          <option value="325">325</option>
+
+                          <option value="335">335</option>
+                          <option value="345">345</option>
+                          <option value="355">355</option>
+                        </select>
+                        <!-- <input type="height" name="height" id="height" /> -->
+                        <select
+                          name="height"
+                          id="height"
+                          size="1"
+                          class="searchFormField sel home-input-ratio j-sf-input"
+                          data-index-no="3"
+                          data-facet-name="profile"
+                        >
+                          <option label=" " value=""></option>
+                          <option value="" disabled selected>height</option>
+                          <option value="35">35</option>
+                          <option value="40">40</option>
+                          <option value="45">45</option>
+                          <option value="50">50</option>
+                          <option value="55">55</option>
+                          <option value="60">60</option>
+                          <option value="65">65</option>
+                          <option value="70">70</option>
+                          <option value="75">75</option>
+                          <option value="80">80</option>
+                        </select>
+                        <!-- <input type="diameter" name="diameter" id="diameter" /> -->
+                        <select
+                          name="diameter"
+                          id="diameter"
+                          size="1"
+                          class="searchFormField sel home-input-diameter j-sf-input"
+                          data-index-no="5"
+                          data-facet-name="size"
+                        >
+                          <option label=" " value=""></option>
+                          <option value="" disabled selected>diameter</option>
+                          <option value="15">15</option>
+                          <option value="16">16</option>
+                          <option value="17">17</option>
+                          <option value="18">18</option>
+                          <option value="19">19</option>
+                        </select>
+                        <span id=""></span>
+                      </div>
+                    </td>
+
                     <tr>
-                        <td>
-                            <label for="exampleFormControlInput1" class="form-label">Car model</label><br />
-                            <div>
-                                <select class="carmodel" id="car-model" name="carmodel"
-                                    size="1">
-                                    
-                                    <option value="" disabled selected>select car model</option>
-
-                                    <option data-image="https://image.delti.com/simg/Logos/AIWAYS.png" value="AIWAYS">
-                                        AIWAYS
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/ALFAROMEO.png"
-                                        value="ALFA ROMEO">
-                                        ALFA ROMEO
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/ALPINA.png" value="ALPINA">
-                                        ALPINA
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/ASTONMARTIN.png"
-                                        value="ASTON MARTIN">
-                                        ASTON MARTIN
-                                    </option>
-                                    <option  data-image="https://image.delti.com/simg/Logos/AUDI.png"
-                                        value="AUDI">
-                                        AUDI
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/BAIC.png" value="BAIC">
-                                        BAIC
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/BENTLEY.png" value="BENTLEY">
-                                        BENTLEY
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/BMW.png" value="BMW">
-                                        BMW
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/BMWM.png" value="BMW M">
-                                        BMW M
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/BORGWARD.png"
-                                        value="BORGWARD">
-                                        BORGWARD
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/BUGATTI.png" value="BUGATTI">
-                                        BUGATTI
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/BYD.png" value="BYD">
-                                        BYD
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/CADILLAC.png"
-                                        value="CADILLAC">
-                                        CADILLAC
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/CHEVROLET.png"
-                                        value="CHEVROLET">
-                                        CHEVROLET
-                                    </option>
-
-                                    <option data-image="https://image.delti.com/simg/Logos/FAW.png" value="FAW">
-                                        FAW
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/FERRARI.png" value="FERRARI">
-                                        FERRARI
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/FIAT.png" value="FIAT">
-                                        FIAT
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/FISKER.png" value="FISKER">
-                                        FISKER
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/FORD.png" value="FORD">
-                                        FORD
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/GENESIS.png" value="GENESIS">
-                                        GENESIS
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/HONDA.png" value="HONDA">
-                                        HONDA
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/HYUNDAI.png" value="HYUNDAI">
-                                        HYUNDAI
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/INEOS.png" value="INEOS">
-                                        INEOS
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/INFINITI.png"
-                                        value="INFINITI">
-                                        INFINITI
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/ISUZU.png" value="ISUZU">
-                                        ISUZU
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/IVECO.png" value="IVECO">
-                                        IVECO
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/JAGUAR.png" value="JAGUAR">
-                                        JAGUAR
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/JEEP.png" value="JEEP">
-                                        JEEP
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/KIA.png" value="KIA">
-                                        KIA
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/KTM.png" value="KTM">
-                                        KTM
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/LADA.png" value="LADA">
-                                        LADA
-                                    </option>
-
-                                    <option data-image="https://image.delti.com/simg/Logos/LANCIA.png" value="LANCIA">
-                                        LANCIA
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/LANDROVER.png"
-                                        value="LAND ROVER">
-                                        LAND ROVER
-                                    </option>
-
-                                    <option data-image="https://image.delti.com/simg/Logos/LEXUS.png" value="LEXUS">
-                                        LEXUS
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/LUCID.png" value="LUCID">
-                                        LUCID
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/LYNK&amp; CO.png"
-                                        value="LYNK &amp; CO">
-                                        LYNK &amp; CO
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/MAN.png" value="MAN">
-                                        MAN
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/MASERATI.png"
-                                        value="MASERATI">
-                                        MASERATI
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/MAXUS.png" value="MAXUS">
-                                        MAXUS
-                                    </option>
-
-                                    <option data-image="https://image.delti.com/simg/Logos/MERCEDES-BENZ.png"
-                                        value="MERCEDES-BENZ">
-                                        MERCEDES-BENZ
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/MG.png" value="MG">
-                                        MG
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/MINI.png" value="MINI">
-                                        MINI
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/MITSUBISHI.png"
-                                        value="MITSUBISHI">
-                                        MITSUBISHI
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/NIO.png" value="NIO">
-                                        NIO
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/NISSAN.png" value="NISSAN">
-                                        NISSAN
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/OPEL.png" value="OPEL">
-                                        OPEL
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/ORA.png" value="ORA">
-                                        ORA
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/PEUGEOT.png" value="PEUGEOT">
-                                        PEUGEOT
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/POLESTAR.png"
-                                        value="POLESTAR">
-                                        POLESTAR
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/PONTIAC.png" value="PONTIAC">
-                                        PONTIAC
-                                    </option>
-
-                                    <option data-image="https://image.delti.com/simg/Logos/RENAULT.png" value="RENAULT">
-                                        RENAULT
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/ROLLS-ROYCE.png"
-                                        value="ROLLS-ROYCE">
-                                        ROLLS-ROYCE
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/ROVER.png" value="ROVER">
-                                        ROVER
-                                    </option>
-
-                                    <option data-image="https://image.delti.com/simg/Logos/SUBARU.png" value="SUBARU">
-                                        SUBARU
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/SUZUKI.png" value="SUZUKI">
-                                        SUZUKI
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/TESLA.png" value="TESLA">
-                                        TESLA
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/TOYOTA.png" value="TOYOTA">
-                                        TOYOTA
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/VOLKSWAGEN.png"
-                                        value="VOLKSWAGEN">
-                                        VOLKSWAGEN
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/VOLVO.png" value="VOLVO">
-                                        VOLVO
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/WEY.png" value="WEY">
-                                        WEY
-                                    </option>
-                                    <option data-image="https://image.delti.com/simg/Logos/ZOTYE.png" value="ZOTYE">
-                                        ZOTYE
-                                    </option>
-                                </select>
-                            </div>
-                            <span id="carModel-error"></span>
-                        </td>
-                        <td>
-                            <label for="exampleFormControlInput1" class="form-label">Make</label><br />
-                            <select name="make" id="make" size="1" class="searchFormField sel home-input-width j-sf-input" data-index-no="2" data-facet-name="make">
-                                <option value="" disabled selected>select tire make</option>
-                                <option value="4.00">for passenger cars</option>
-                                <option value="4.00/4.25">4*4s</option>
-                                <option value="4.00/4.50">sports utility</option>
-                                <option value="4.40/4.50">commercial vehicles</option>
-                                
-                              </select>
-                            <span id="make-error"></span>
-                        </td>
+                      <td>
+                        <label for="exampleFormControlInput1" class="form-label"
+                          >Amount</label
+                        ><br />
+                        <select
+                          name="amount"
+                          id="amount"
+                          size="1"
+                          class="searchFormField sel home-input-diameter j-sf-input"
+                          data-index-no="5"
+                          data-facet-name="size"
+                        >
+                          <option label=" " value=""></option>
+                          <option value="" disabled selected>Amount</option>
+                          <option value="15">10000</option>
+                          <option value="16">20000</option>
+                          <option value="17">30000</option>
+                          <option value="18">50000</option>
+                          <option value="19">100,000</option>
+                        </select>
+                      </td>
+                      <td>
+                        <label for="">Date and time of Registration</label>
+                        <div class="cols">
+                          <input
+                            type="time"
+                            name="time"
+                            id="registrationTime"
+                          />
+                          <input
+                            type="date"
+                            name="date"
+                            id="registrationDate"
+                          />
+                          <span id="dateTime-error"></span>
+                        </div>
+                      </td>
                     </tr>
+
+                    <!-- <div class="mb-3"></div> -->
+                    <!-- <div class="mb-3"></div> -->
+
+                    <!-- <div class="mb-3"> </div> -->
+                    <!-- <div class="mb-3"></div> -->
                     <tr>
-                        <td>
-                            <label for="exampleFormControlInput1" class="form-label">Gender</label><br />
-                            <select name="gender" id="gender" size="1" class="searchFormField sel home-input-width j-sf-input" data-index-no="2" data-facet-name="make">
-                                <option value="" disabled selected>select gender</option>
-                                <option value="4.00">male</option>
-                                <option value="4.00/4.25">female</option>
-                                
-                            <span id="gender-error"></span>
-                        </td>
-                        <td>
-                            <label for="">Tire size</label>
-                            <div class="colss">
-                                <!-- <input type="width" name="width" id="width" /> -->
-                                <select name="width" id="width" size="1" class="searchFormField sel home-input-width j-sf-input" data-index-no="2" data-facet-name="width">
-                                    <option value="" disabled selected>width</option>
-                                    <option value="4.00">4.00</option>
-                                    <option value="4.00/4.25">4.00/4.25</option>
-                                    <option value="4.00/4.50">4.00/4.50</option>
-                                    <option value="4.40/4.50">4.40/4.50</option>
-                                    <option value="4.50">4.50</option>
-                                    <option value="4.75/5.00">4.75/5.00</option>
-                                    <option value="4.75/5.25">4.75/5.25</option>
-                                    <option value="4.80">4.80</option>
-                                    <option value="5">5</option>
-                                    <option value="5.00">5.00</option>
-                                    <option value="5.00/5.20">5.00/5.20</option>
-                                    <option value="5.00/5.25">5.00/5.25</option>
-                                    <option value="5.25/5.50">5.25/5.50</option>
-                                    <option value="5.25/6.00">5.25/6.00</option>
-                                    <option value="5.50">5.50</option>
-                                    <option value="5.50/6.00">5.50/6.00</option>
-                                    <option value="5.60">5.60</option>
-                                    <option value="5.90">5.90</option>
-                                    <option value="6.00">6.00</option>
-                                    <option value="6.00/6.50">6.00/6.50</option>
-                                    <option value="6.40">6.40</option>
-                                    <option value="6.50">6.50</option>
-                                    <option value="6.70">6.70</option>
-                                    <option value="7.0">7.0</option>
-                                    <option value="7.00">7.00</option>
-                                    <option value="7.25">7.25</option>
-                                    <option value="7.5">7.5</option>
-                                    <option value="7.50">7.50</option>
-                                    <option value="8.20">8.20</option>
-                                    <option value="15/16">15/16</option>
-                                    <option value="17">17</option>
-                                    <option value="27x8.50">27x8.50</option>
-                                    <option value="28x8.50">28x8.50</option>
-                                    <option value="28x10.00">28x10.00</option>
-                                    <option value="30x9.50">30x9.50</option>
-                                    <option value="30x10.00">30x10.00</option>
-                                    <option value="31x10.50">31x10.50</option>
-                                    <option value="31x11.50">31x11.50</option>
-                                    <option value="32x11.50">32x11.50</option>
-                                    <option value="33x10.50">33x10.50</option>
-                                    <option value="33x12.50">33x12.50</option>
-                                    <option value="35x11.00">35x11.00</option>
-                                    <option value="35x12.50">35x12.50</option>
-                                    <option value="35x13.50">35x13.50</option>
-                                    <option value="115">115</option>
-                                    <option value="125">125</option>
-                                    <option value="135">135</option>
-                                    <option value="145">145</option>
-                                    <option value="155">155</option>
-                                    <option value="165">165</option>
-                                    <option value="175">175</option>
-                                    <option value="180">180</option>
-                                    <option value="185">185</option>
-                                    <option value="190">190</option>
-                                    <option value="195">195</option>
-                                    <option value="200">200</option>
-                                    <option value="205" >205</option>
-                                    <option value="210">210</option>
-                                    <option value="215">215</option>
-                                    <option value="220">220</option>
-                                    <option value="225">225</option>
-                                    <option value="235">235</option>
-                                    <option value="240">240</option>
-                                    <option value="245">245</option>
-                                    <option value="255">255</option>
-                                    <option value="265">265</option>
-                                    <option value="275">275</option>
-                                    <option value="285">285</option>
-                                    <option value="295">295</option>
-                                    <option value="305">305</option>
-                                    <option value="315">315</option>
-                                    <option value="325">325</option>
-                                    
-                                    <option value="335">335</option>
-                                    <option value="345">345</option>
-                                    <option value="355">355</option>
-                                    </select>
-                                <!-- <input type="height" name="height" id="height" /> -->
-                                <select name="height" id="height" size="1" class="searchFormField sel home-input-ratio j-sf-input" data-index-no="3" data-facet-name="profile"><option label=" " value="">
-                                </option>
-                                <option value="" disabled selected>height</option>
-                                <option value="35">35</option>
-                                <option value="40">40</option>
-                                <option value="45">45</option>
-                                <option value="50">50</option>
-                                <option value="55">55</option>
-                                <option value="60">60</option>
-                                <option value="65">65</option>
-                                <option value="70">70</option>
-                                <option value="75">75</option>
-                                <option value="80">80</option>
-                                </select>
-                               <!-- <input type="diameter" name="diameter" id="diameter" /> -->
-                               <select name="diameter" id="diameter" size="1" class="searchFormField sel  home-input-diameter j-sf-input" data-index-no="5" data-facet-name="size"><option label=" " value="">
-                            </option>
-                            <option value="" disabled selected>diameter</option>
-                            <option value="15">15</option>
-                            <option value="16" >16</option>
-                            <option value="17">17</option>
-                            <option value="18">18</option>
-                            <option value="19">19</option>
-                            </select>
-                                <span id=""></span>
-                            </div>
-                        </td>
-                        
+                      <td>
+                        <div flex="center" class="container">
+                          <button
+                            type="submit"
+                            class="btn"
+                            onclick="openPopup()"
+                            id="submitBtn"
+                          >
+                            Submit
+                          </button>
+                          <div class="popup" id="popup">
+                            <img
+                              src="/public/images/tick.png"
+                              alt="image here"
+                              width="90px"
+                              height="90px"
+                            />
+                            <h2>Thank you!</h2>
+                            <p>Your details have been succesfully submitted</p>
+                            <button type="button" onclick="closePopup()">
+                              OK
+                            </button>
+                          </div>
+                        </div>
+                      </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <label for="exampleFormControlInput1" class="form-label">Amount</label><br />
-                            <select name="amount" id="amount" size="1" class="searchFormField sel  home-input-diameter j-sf-input" data-index-no="5" data-facet-name="size"><option label=" " value="">
-                            </option>
-                            <option value="" disabled selected>Amount</option>
-                            <option value="15">10000</option>
-                            <option value="16" >20000</option>
-                            <option value="17">30000</option>
-                            <option value="18">50000</option>
-                            <option value="19">100,000</option>
-                            </select>
-                        </td>
-                        <td>
-                            <label for="">Date and time of Registration</label>
-                            <div class="cols">
-                                <input type="time" name="time" id="registrationTime" />
-                                <input type="date" name="date" id="registrationDate" />
-                                <span id="dateTime-error"></span>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
+
+                    <!-- <br /><br /><br /><br /><br /> -->
+                    <!-- <hr /> -->
+                    <!-- <footer></footer> -->
+                    <script>
+                      let popup = document.getElementById("popup");
+
+                      function openPopup() {
+                        popup.classList.add("open-popup");
+                      }
+                      function closePopup() {
+                        popup.classList.remove("open-popup");
+                      }
+                    </script>
+                    <script src="/public/js/trial.js"></script>
+                    <!-- <script src="/public/js/registration-script.js"></script> -->
+                  </select>
+                </td>
+              </tr>
             </div>
-            <!-- <div class="mb-3"></div> -->
-            <!-- <div class="mb-3"></div> -->
-
-            <!-- <div class="mb-3"> </div> -->
-            <!-- <div class="mb-3"></div> -->
-
-            <div flex="center">
-                <button type="submit" class="btn btn-primary btn-lg" id="submitBtn" onclick="validate(event)">
-                    Submit
-                </button>
-            </div>
-        </form>
+          </table>
+        </div>
+      </form>
     </div>
-    <br /><br /><br /><br /><br />
-    <hr />
-    <footer></footer>
-    <script src="/public/js/tireform.js"></script>
-    <!-- <script src="/public/js/registration-script.js"></script> -->
-</body>
-
+  </body>
 </html>

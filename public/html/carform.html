@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="/public/css/registration.css" />
+  <title>Car form</title>
+</head>
+
+<body>
+  <div class="registration-form">
+    <form id="formId" onsubmit="return validate(event)" name="carform" method='POST' action='/api/regclient'>
+      <header align="center" style="font-size: 2vw !important">
+       CLIENT REGISTRATION
+      </header>
+      <br />
+
+      <div class="mb-3">
+        <table>
+          <tr>
+            <td>
+              <label for="exampleFormControlInput1" class="form-label">First Name</label><br />
+              <input type="text" class="form-control" id="firstName" name="firstname"
+                placeholder="Enter your first Name" />
+              <br />
+              <span id="firstName-error"></span>
+            </td>
+            <td>
+              <label for="exampleFormControlInput1" class="form-label">Last Name</label><br />
+              <input type="text" class="form-control" id="lastName" name="lastname"
+                placeholder="Enter your last Name" />
+              <br />
+              <span id="lastName-error"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="exampleFormControlInput1" class="form-label">Email</label><br />
+              <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email here" />
+              <br />
+              <span id="email-error"></span>
+            </td>
+            <td>
+              <label for="exampleFormControlInput1" class="form-label">Phone number</label><br />
+              <input type="tel" class="form-control" name="phonenumber" id="phoneNumber"
+                placeholder="Enter your phone number" />
+              <br />
+              <span id="phoneNumber-error"></span>
+            </td>
+          </tr>
+          <tr>
+            <td >
+              <label for="exampleFormControlInput1" class="form-label">NIN number</label><br />
+              <input type="text" class="form-control" name="ninnumber" id="ninNumber"
+                placeholder="Enter your NIN number"  />
+              <br />
+              <span id="ninNumber-error"></span>
+            </td>
+            <td>
+              <label for="exampleFormControlInput1" class="form-label">Amount</label>
+              <input type="text" class="form-control" name="amount" id="amount"
+                placeholder="Enter your amount"  /> <br> 
+            </td>
+          </tr>
+        </table>
+      </div>
+      <!-- <div class="mb-3"></div> -->
+      <!-- <div class="mb-3"></div> -->
+      <!-- <div class="mb-3"></div> -->
+      <!-- <div class="mb-3"></div> -->
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Gender</label><br />
+
+        <div class="form-check form-check-inline">
+          <input class="gender" type="radio" name="gender" id="maleRadio" value="male" />
+          <label class="form-check-label" for="maleRadio">Male</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="gender" type="radio" name="gender" id="femaleRadio" value="female" />
+          <label class="form-check-label" for="famaleRadio">Female</label>
+        </div>
+        <span id="error"></span>
+      </div>
+      <div class="mb-3">
+        <table>
+          <tr>
+            <td>
+              <label for="exampleFormControlInput1" class="form-label">Number plate</label><br />
+              <input type="text" class="form-control" name=" numberplate" id="numberPlate"
+                placeholder="Enter your number plate" />
+              <br />
+              <span id="numberPlate-error"></span>
+            </td>
+            <td>
+              <label for="exampleFormControlInput1" class="form-label">Unique number</label><br />
+              <input type="text" class="form-control" name=" uniquenumber" id="uniqueNumber"
+                placeholder="Unique number" />
+              <br />
+              <span id="uniqueNumber-error"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="exampleFormControlInput1" class="form-label">Vehicle model</label><br />
+              <input type="vehicleModel" class="form-control" name=" vehiclemodel" id="vehicleModel"
+                placeholder="Vehicle Model" />
+              <br />
+              <span id="vehicleModel-error"></span>
+            </td>
+            <td>
+              <label for="exampleFormControlInput1" class="form-label">Car type</label><br />
+              <select class="form-select" id="car-type" name="car-type" aria-label="Default select example">
+                <br />
+                <option value="" disabled selected>select car type</option>
+                <option value="1">Truck</option>
+                <option value="2">Taxi</option>
+                <option value="3">Coaster</option>
+                <option value="4">Personal car</option>
+                <option value="5">Bodaboda</option>
+              </select>
+              <br />
+              <span id="carType-error"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="exampleFormControlInput1" class="form-label">vehicle color</label><br />
+              <input type="color" class="form-control" name="vehiclecolor" id="vehicleColor"
+                placeholder="Enter vehicle color" />
+              <br />
+              <span id="vehicleColor-error"></span>
+            </td>
+            <td>
+              <label for="">Date and time of Registration</label>
+              <div class="cols">
+                <input type="time" name="time" id="registrationTime" />
+                <input type="date" name="date" id="registrationDate" />
+                <span id="dateTime-error"></span>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <!-- <div class="mb-3"></div> -->
+      <!-- <div class="mb-3"></div> -->
+
+      <!-- <div class="mb-3"> </div> -->
+      <!-- <div class="mb-3"></div> -->
+
+      <div flex="center">
+        <button type="submit" class="btn btn-primary btn-lg" id="submitBtn" onclick="Validate()">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+  <br /><br /><br /><br /><br />
+  <hr />
+  <footer></footer>
+  <script src="/public/js/trial.js"></script>
+</body>
+
+</html>
